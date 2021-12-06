@@ -31,11 +31,11 @@ nav {
         text-decoration: none;
         color: #87614E;
         font-size: 18px;
+        font-family: Solar Vesta Serif;
         cursor: pointer;
       }
     }
   }
-
 
   .navigation-wrapper {
     position: absolute;
@@ -46,7 +46,7 @@ nav {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    background-color: rgba(255, 255, 255, 0.324);
+    background-color: rgba(255, 255, 255, 0.8);
     font-family: 'Expletus Sans', cursive;
     font-size: 18px;
     text-transform: uppercase;
@@ -58,5 +58,14 @@ nav {
       padding: 9px 0;
       color: #87614E;
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  nav > .navigation-wrapper {
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
   }
 }

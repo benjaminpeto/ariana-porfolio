@@ -1,6 +1,13 @@
 // Import Fonts
 @import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap');
 
+@font-face {
+  font-family: "Solar Vesta Serif";
+  src: local("Solar Vesta Serif"),
+    url("./Fonts/Solar\ Vesta\ Serif.ttf") format("truetype");
+  font-weight: normal;
+}
+
 // Resetting default CSS styling
 
 *,
