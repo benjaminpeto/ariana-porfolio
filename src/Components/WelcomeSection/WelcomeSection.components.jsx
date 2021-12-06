@@ -1,8 +1,8 @@
 import React from "react";
 
-import './AboutPage.styles.scss';
+import './WelcomeSection.styles.scss';
 
-function AboutPage() {
+function WelcomeSection() {
   return (
     <div className='main-wrapper'>
         <h1>Ariana Scalzo</h1>
@@ -10,4 +10,4 @@ function AboutPage() {
   );
 }
 
-export default AboutPage;
+export default WelcomeSection;
