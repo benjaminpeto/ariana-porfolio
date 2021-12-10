@@ -1,0 +1,41 @@
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .contact-btn {
+    text-decoration: none;
+    margin: 25px 10px;
+    font-family: Solar Vesta Serif;
+    color: #87614E;
+    font-size: 18px;
+
+    &::before,
+    &::after {
+      display: inline-block;
+      content: "";
+      border-top: 2px solid #C5BFB2;
+      width: 39rem;
+      margin: 0 1rem;
+      transform: translateY(-0.35rem);
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    font-family: 'Expletus Sans', serif;
+    font-size: 10px;
+    color: #726E6E;
+    margin-bottom: 25px;
+
+    .benji-anchor {
+      color:black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
