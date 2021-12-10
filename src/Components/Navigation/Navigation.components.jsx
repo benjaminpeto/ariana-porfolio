@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./Navigation.styles.scss";
 
-import logo from '../../assets/AS LOGO.png';
+import logo from '../../assets/AS LOGO.webp';
 
 function Navigation() {
 	const [isOpen, setIsOpen] = useState(false);
