@@ -1,6 +1,11 @@
 import React from "react";
 
-import resume from '../../data/ariana_scalzo_cv.pdf'
+import resume from '../../data/ariana_scalzo_cv.pdf';
+
+import cocomoon from '../../assets/coco moon facial niht oils.webp';
+import notebook from '../../assets/notebook_.webp';
+import drowning from '../../assets/drowning.webp';
+import perucoffee from '../../assets/Peru coffee.webp';
 
 import './AboutSection.styles.scss';
 
@@ -29,8 +34,35 @@ function AboutSection() {
             </p>
           </div>
         </div>
+
         <div className="button-wrapper">
           <a className='resume-btn' href={resume} download="ariana_scalzo_cv.pdf">RESUME</a>
+        </div>
+
+        <div className="image-wrapper">
+          <div className="portfolio-text">PORTFOLIO</div>
+          <div>
+            <img src={cocomoon} alt='cocomoon facial oil' width='360px' />
+          </div>
+          <div>
+            <img src={notebook} alt='notebook prints' width='360px' />
+          </div>
+          <div>
+            <img src={drowning} alt='illustration of a surfer' width='360px' />
+          </div>
+          <div>
+            <img src={perucoffee} alt='coffee bag with illustration' width='360px' />
+          </div>
+        </div>
+
+        {/* IMAGE SLIDER ONN MOBILE VIEW */}
+
+        <div id="img-cf">
+        <div className="portfolio-text">PORTFOLIO</div>
+          <img src={cocomoon} alt='cocomoon facial oil' width='360px' />
+          <img src={notebook} alt='notebook prints' width='360px' />
+          <img src={drowning} alt='illustration of a surfer' width='360px' />
+          <img src={perucoffee} alt='coffee bag with illustration' width='360px' />
         </div>
 
     </section>
