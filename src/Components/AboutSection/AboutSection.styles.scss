@@ -1,5 +1,5 @@
 .about-wrapper {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   background: url(../../assets/plain-beige-background-texture.jpg) no-repeat 
     center center fixed;
@@ -8,11 +8,14 @@
   -o-background-size: cover;
   background-size: cover;
   padding: 100px 200px;
+  overflow: hidden;
 
   h1 {
     font-size: 48px;
     color: #AB7C65;
     font-family: About Love;
+    width: fit-content;
+    margin: 0;
   }
 
   .paragraph-wrapper {
@@ -31,6 +34,82 @@
       p {
         margin-bottom: 30px;
       }
+    }
+  }
+
+  .button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+
+    .resume-btn {
+      text-decoration: none;
+      font-family: Solar Vesta Serif;
+      font-size: 24px;
+      padding: 10px 15px 5px 15px;
+      color: #87614E;
+      border: 2px solid #87614E;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 200ms ease-in;
+
+      &:hover {
+        color: whitesmoke;
+        background-color: #87614E;
+        
+      }
+    }
+  } 
+}
+
+@media screen and (max-width: 1350px) {
+  .about-wrapper {
+    padding: 100px 100px;
+
+    h1 {
+      margin-left: 85px;
+    }
+
+    .paragraph-wrapper > div {
+      width: 370px;
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .about-wrapper > h1 {
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .about-wrapper {
+    height: 100%;
+    padding: 100px 35px;
+
+    h1 {
+      margin: 0 auto;
+    }
+
+    .paragraph-wrapper {
+      display: grid;
+      grid-template-rows: repeat(1, 1fr);
+      font-size: 16px;
+      gap: 0;
+      overflow: wrap;
+
+      div {
+        width: auto;
+
+        .odd-paragraph {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .button-wrapper {
+      margin-top: 0;
     }
   }
 }
