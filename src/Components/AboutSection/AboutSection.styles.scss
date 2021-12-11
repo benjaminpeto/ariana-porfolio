@@ -52,7 +52,6 @@
       border-radius: 5px;
       cursor: pointer;
       transition: 200ms ease-in;
-      margin-bottom: 50px;
 
       &:hover {
         color: whitesmoke;
@@ -150,7 +149,7 @@
     }
 
     .image-wrapper > .portfolio-text {
-      letter-spacing: 10px;
+      letter-spacing: 15px;
     }
   }
 }
@@ -166,11 +165,15 @@
       display: none;
     }
 
+    .button-wrapper > .resume-btn {
+      margin-bottom: 50px;
+    }
+
     #img-cf {
       display: flex;
       position: relative;
       align-items: center;
-      margin-top: 150px;
+      margin-top: 200px;
 
       .portfolio-text {
         position: absolute;
@@ -227,5 +230,18 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .about-wrapper > #img-cf {
+    margin-top: 150px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .about-wrapper > #img-cf > .portfolio-text {
+    font-size: 24px;
+    letter-spacing: 10px;
   }
 }

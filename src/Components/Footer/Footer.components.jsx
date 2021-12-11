@@ -10,7 +10,9 @@ function Footer() {
       <Link to="/contact" className="contact-btn">
         Contact
       </Link>
-      <p>Designed by Ariana Scalzo & Coded by <a className="benji-anchor" href='https://www.benjaminpeto.com/' target='_blank' rel='noreferrer'>Benjamin Peto</a> | Copyrights © 2021 All rights reserved</p>
+      <div className="footer-text">
+        <p>Designed by Ariana Scalzo & Coded by <a className="benji-anchor" href='https://www.benjaminpeto.com/' target='_blank' rel='noreferrer'>Benjamin Peto</a></p><span>|</span><p>Copyrights © 2021 All rights reserved</p>
+      </div>
     </div>
   );
 }
