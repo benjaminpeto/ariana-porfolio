@@ -80,12 +80,6 @@
   }
 }
 
-@media screen and (max-width: 600px) {
-  .footer-wrapper {
-    margin-top: 200px;
-  }
-}
-
 @media screen and (max-width: 563px) {
   .footer-wrapper {
 
@@ -116,7 +110,6 @@
 
 @media screen and (max-width: 435px) {
   .footer-wrapper {
-    margin-top: 150px;
 
     .contact-btn::before,
     .contact-btn::after {

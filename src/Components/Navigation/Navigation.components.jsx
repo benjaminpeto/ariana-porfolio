@@ -60,7 +60,7 @@ function Navigation() {
 				</li>
 				<li>|</li>
 				<li>
-          <a href='https://www.instagram.com/saladitastudio/' target='_blank' rel='noreferrer'>
+          <a href='https://www.instagram.com/arianascalzodesign/' target='_blank' rel='noreferrer'>
 						IG
 					</a>
 				</li>
