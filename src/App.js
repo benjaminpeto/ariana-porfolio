@@ -2,8 +2,8 @@ import React from "react";
 /* import { Routes, Route, Link } from "react-router-dom"; */
 
 import Navigation from "./Components/Navigation/Navigation.components";
-import WelcomeSection from "./Components/WelcomeSection/WelcomeSection.components";
-import AboutSection from "./Components/AboutSection/AboutSection.components";
+
+import HomePage from "./Pages/HomePage/Home.pages";
 
 import './App.scss';
 
@@ -11,8 +11,7 @@ function App() {
   return (
     <div className="App">
       <Navigation />
-      <WelcomeSection />
-      <AboutSection />
+      <HomePage />
     </div>
   );
 }

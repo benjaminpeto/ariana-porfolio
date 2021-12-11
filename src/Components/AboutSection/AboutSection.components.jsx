@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../Footer/Footer.components";
 
 import resume from '../../data/ariana_scalzo_cv.pdf';
 
@@ -66,7 +65,6 @@ function AboutSection() {
           <img src={perucoffee} alt='coffee bag with illustration' width='360px' />
         </div>
 
-        <Footer />
     </section>
   );
 }
