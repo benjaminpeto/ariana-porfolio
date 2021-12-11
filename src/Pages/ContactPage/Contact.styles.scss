@@ -31,11 +31,18 @@
         padding: 10px 0;
         background-color: transparent;
 
-        &::placeholder {
+        &[type=text],
+        &[type=email] {
+          padding: 10px 10px 7px 10px;
           font-size: 14px;
           font-family: 'Expletus Sans', sans-serif;
           color: #6F6B6B;
-          padding-left: 8px;
+        }
+
+        &[type=text]:focus,
+        &[type=email]:focus {
+          outline: none;
+          border: 2px solid #87614E;
         }
       }
     }
@@ -57,12 +64,14 @@
         background-color: transparent;
         height: 100px;
         width: 100%;
+        font-size: 14px;
+        font-family: 'Expletus Sans', sans-serif;
+        color: #6F6B6B;
+        padding: 8px 0 0 8px;
 
-        &::placeholder {
-          font-size: 14px;
-          font-family: 'Expletus Sans', sans-serif;
-          color: #6F6B6B;
-          padding: 8px 0 0 8px;
+        &:focus {
+          outline: none;
+          border: 2px solid #87614E;
         }
       }
 
