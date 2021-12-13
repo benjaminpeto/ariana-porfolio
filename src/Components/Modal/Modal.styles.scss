@@ -1,0 +1,89 @@
+.modal {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  width: 60%;
+  height: 70%;
+
+  .close-btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      font-size: 35px;
+      font-weight: 100;
+      color: #87614E;
+      font-family: sans-serif;
+      background-color: #fff;
+      margin: 5px 15px;
+      cursor: pointer;
+    }
+  }
+
+  .body-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .logo {
+      margin: 42px 0;
+    }
+
+    .title {
+      margin-bottom: 60px;
+
+      &::after {
+        display: inline-block;
+        content: "";
+        border-top: 2px solid #87614E;
+        width: 43px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        margin: 30px 0;
+      }
+
+      h1 {
+        font-family: Solar Vesta Serif, serif;
+        font-size: 16px;
+        color: #87614E;
+      }
+    }
+
+    .body {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 64px;
+
+      p {
+        font-family: Expletus Sans;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #6F6B6B;
+      }
+    }
+
+    .social-container {
+      display: flex;
+      gap: 20px;
+
+      a {
+        cursor: pointer;
+        padding: 5px;
+        transition: 300ms ease-in;
+
+        &:hover {
+          transform: scale(0.8);
+        }
+      }
+    }
+  }
+}

@@ -1,10 +1,14 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
+
+import Modal from '../../Components/Modal/Modal.components';
 
 import './Contact.styles.scss';
 
 const Contact = () => {
   const form = useRef();
+
+  const [modalOpen, setModalOpen] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -23,7 +27,11 @@ const Contact = () => {
 
       <h1>Let's work together!</h1>
 
-      <form ref={form} onSubmit={sendEmail}>
+      <form ref={form}
+        onSubmit={(e) => {
+          sendEmail(e);
+          setModalOpen(true);
+        }}>
 
         <div className='name-email'>
           <label>Name</label>
@@ -45,6 +53,8 @@ const Contact = () => {
         <span>|</span>
         <p>Las Palmas, Canary Islands, Spain</p>
       </div>
+
+      {modalOpen && <Modal setOpenModal={setModalOpen} />}
 
     </section>
   );
