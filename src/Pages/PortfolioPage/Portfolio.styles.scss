@@ -25,11 +25,11 @@
 
       p {
         font-family: About Love;
-        font-size: 70px;
+        font-size: 40px;
         color: #87614E;
         text-decoration: underline;
         text-decoration-thickness: 2px;
-        transform: rotate(-30deg);
+        margin-bottom: -10px;
       }
 
       a {
@@ -50,5 +50,6 @@
 
   .carousel {
     height: 100%;
+    width: 100%;
   }
 }

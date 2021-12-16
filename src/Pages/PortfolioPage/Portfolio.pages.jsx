@@ -2,6 +2,8 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
+import SlideShow from "../../Components/SlideShow/SlideShow.components";
+
 import './Portfolio.styles.scss';
 
 function PortfolioPage() {
@@ -29,7 +31,7 @@ function PortfolioPage() {
       </div>
 
       <div className="carousel">
-      
+        <SlideShow />
       </div>
     </div>
   );
