@@ -1,0 +1,54 @@
+.portfolio-page {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+  .link-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+
+    .links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      
+      &:nth-child(2) {
+        margin: 40px 0;
+      }
+
+      p {
+        font-family: About Love;
+        font-size: 70px;
+        color: #87614E;
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        transform: rotate(-30deg);
+      }
+
+      a {
+        font-family: Solar Vesta Serif;
+        font-size: 48px;
+        text-decoration: none;
+        color: #87614E;
+        transition: 100ms ease-in;
+
+        &:hover {
+          color: transparent;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: #87614E;
+        }
+      }
+    }
+  }
+
+  .carousel {
+    height: 100%;
+  }
+}

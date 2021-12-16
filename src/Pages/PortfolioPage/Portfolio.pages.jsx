@@ -1,10 +1,37 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
+import './Portfolio.styles.scss';
+
 function PortfolioPage() {
   return (
-    <>
-      <h1>portfolio page</h1>
-    </>
+    <div className="portfolio-page">
+      <div className="link-wrapper">
+        <div className="links">
+          <p>01</p>
+          <Link to="/portfolio/ux-ui">
+            UX | UI
+          </Link>
+        </div>
+        <div className="links">
+          <p>02</p>
+          <Link to="/portfolio/branding">
+            BRANDING
+          </Link>
+        </div>
+        <div className="links">
+          <p>03</p>
+          <Link to="/portfolio/illustrations">
+            ILLUSTRATIONS
+          </Link>
+        </div>
+      </div>
+
+      <div className="carousel">
+      
+      </div>
+    </div>
   );
 }
 
