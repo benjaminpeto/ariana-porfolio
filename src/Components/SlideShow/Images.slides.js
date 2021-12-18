@@ -5,9 +5,9 @@ import notebook from '../../assets/notebook_.webp';
 import pblogo from '../../assets/pb logo.webp';
 
 export const images = [
-  {img: peru},
-  {img: cocohair},
-  {img: coconutpool},
-  {img: notebook},
-  {img: pblogo}
+  {url: peru},
+  {url: cocohair},
+  {url: coconutpool},
+  {url: notebook},
+  {url: pblogo}
 ];
