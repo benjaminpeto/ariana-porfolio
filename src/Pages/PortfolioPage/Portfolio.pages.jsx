@@ -4,15 +4,18 @@ import { Link } from "react-router-dom";
 import MenuButton from "../../Components/MenuButton/MenuButton.components";
 import SlideShow from "../../Components/SlideShow/SlideShow.components";
 
+import logo from '../../assets/AS LOGO.webp';
+
 import './Portfolio.styles.scss';
 
 function PortfolioPage() {
   return (
-    <>
+    <div className="page-wrapper">
       <nav>
         <MenuButton />
+        <img src={logo} alt="Ariana Scalzo's logo" height='39px' />
       </nav>
-      
+
       <div className="portfolio-page">
         <div className="link-wrapper">
           <div className="links">
@@ -39,8 +42,28 @@ function PortfolioPage() {
           <SlideShow />
         </div>
       </div>
+
+      <footer>
+        <Link to="/contact" className="contact-btn">
+          Contact
+        </Link>
+
+        <ul>
+          <li>
+            <a href='https://www.linkedin.com/in/ariana-carmen-scalzo-dees/' target='_blank' rel='noreferrer'>
+              IN
+            </a>
+          </li>
+				  <li>|</li>
+          <li>
+            <a href='https://www.instagram.com/arianascalzodesign/' target='_blank' rel='noreferrer'>
+              IG
+            </a>
+          </li>
+        </ul>
+      </footer>
     
-    </>
+    </div>
   );
 }
 

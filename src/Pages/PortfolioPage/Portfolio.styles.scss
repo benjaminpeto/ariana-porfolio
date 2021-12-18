@@ -1,55 +1,105 @@
-.portfolio-page {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
+.page-wrapper {
   height: 100vh;
 
-  .link-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 0 auto;
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 
-    .links {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      
-      &:nth-child(2) {
-        margin: 40px 0;
-      }
+		img {
+			margin: 24px;
+		}
+	}
 
-      p {
-        font-family: About Love;
-        font-size: 40px;
-        color: #87614E;
-        text-decoration: underline;
-        text-decoration-thickness: 2px;
-        margin-bottom: -10px;
-      }
+	.portfolio-page {
+		display: grid;
+    padding-top: 87px;
+		grid-template-columns: repeat(2, 1fr);
+		justify-content: center;
+		align-items: center;
+		width: 100vw;
+    height: calc(100% - 67px);
 
-      a {
-        font-family: Solar Vesta Serif;
-        font-size: 48px;
-        text-decoration: none;
-        color: #87614E;
-        transition: 100ms ease-in;
+		.link-wrapper {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			margin: 0 auto;
 
-        &:hover {
-          color: transparent;
-          -webkit-text-stroke-width: 1px;
-          -webkit-text-stroke-color: #87614E;
-        }
-      }
-    }
-  }
+			.links {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 20px;
 
-  .carousel {
-    height: 100%;
-    width: 100%;
-  }
+				&:nth-child(2) {
+					margin: 40px 0;
+				}
+
+				p {
+					font-family: About Love;
+					font-size: 40px;
+					color: #87614e;
+					text-decoration: underline;
+					text-decoration-thickness: 2px;
+					margin-bottom: -10px;
+				}
+
+				a {
+					font-family: Solar Vesta Serif;
+					font-size: 48px;
+					text-decoration: none;
+					color: #87614e;
+					transition: 100ms ease-in;
+
+					&:hover {
+						color: transparent;
+						-webkit-text-stroke-width: 1px;
+						-webkit-text-stroke-color: #87614e;
+					}
+				}
+			}
+		}
+	}
+
+	footer {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		.contact-btn {
+			text-decoration: none;
+			margin: 24px;
+			font-family: Solar Vesta Serif;
+			color: #87614e;
+			font-size: 18px;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		ul {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 24px;
+
+			li {
+				list-style: none;
+				color: #87614e;
+				padding: 0 3px;
+
+				a {
+					text-decoration: none;
+					color: #87614e;
+					font-size: 18px;
+					font-family: Solar Vesta Serif;
+					cursor: pointer;
+				}
+			}
+		}
+	}
 }
