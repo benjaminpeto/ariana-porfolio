@@ -1,5 +1,6 @@
 .page-wrapper {
-  height: 100vh;
+	height: 100vh;
+	width: 100vw;
 
 	nav {
 		display: flex;
@@ -17,7 +18,7 @@
 		justify-content: center;
 		align-items: center;
 		width: 100vw;
-    height: calc(100% - 67px);
+		height: calc(100% - 67px);
 
 		.link-wrapper {
 			display: flex;
@@ -25,12 +26,17 @@
 			justify-content: center;
 			align-items: flex-start;
 			margin: 0 auto;
+			z-index: 50;
 
 			.links {
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				gap: 20px;
+
+				&:first-child {
+					gap: 24px;
+				}
 
 				&:nth-child(2) {
 					margin: 40px 0;
@@ -61,11 +67,11 @@
 			}
 		}
 
-    .carousel {
-      padding-left: 80px;
-      width: 80%;
-      height: 100vh;
-    }
+		.carousel {
+			padding-left: 80px;
+			width: 80%;
+			height: 100vh;
+		}
 	}
 
 	footer {
@@ -80,6 +86,7 @@
 			font-family: Solar Vesta Serif;
 			color: #87614e;
 			font-size: 18px;
+			z-index: 50;
 
 			&:hover {
 				text-decoration: underline;
@@ -91,6 +98,7 @@
 			align-items: center;
 			justify-content: center;
 			margin: 24px;
+			z-index: 50;
 
 			li {
 				list-style: none;
@@ -104,6 +112,54 @@
 					font-family: Solar Vesta Serif;
 					cursor: pointer;
 				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1060px) {
+	.page-wrapper > .portfolio-page {
+		.link-wrapper > .links {
+			p {
+				font-size: 25px;
+			}
+
+			a {
+				font-size: 35px;
+			}
+		}
+
+		.carousel {
+			padding-left: 25px;
+			width: 70%;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.page-wrapper > .portfolio-page {
+		position: relative;
+		display: flex;
+
+		.carousel {
+			position: absolute;
+			width: 100%;
+			padding: 0;
+			height: calc(100vh + 67px);
+			opacity: 0.2;
+		}
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.page-wrapper > .portfolio-page {
+		.link-wrapper > .links {
+			p {
+				font-size: 15px;
+			}
+
+			a {
+				font-size: 25px;
 			}
 		}
 	}
