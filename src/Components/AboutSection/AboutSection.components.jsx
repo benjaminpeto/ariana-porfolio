@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 import resume from '../../data/ariana_scalzo_cv.pdf';
 
 import cocomoon from '../../assets/coco moon facial niht oils.webp';
@@ -39,31 +41,35 @@ function AboutSection() {
           <a className='resume-btn' href={resume} download="ariana_scalzo_cv.pdf">RESUME</a>
         </div>
 
-        <div className="image-wrapper">
-          <div className="portfolio-text">PORTFOLIO</div>
-          <div>
+        <Link to='/portfolio'>
+          <div className="image-wrapper">
+            <div className="portfolio-text">PORTFOLIO</div>
+            <div>
+              <img src={cocomoon} alt='cocomoon facial oil' width='360px' />
+            </div>
+            <div>
+              <img src={notebook} alt='notebook prints' width='360px' />
+            </div>
+            <div>
+              <img src={drowning} alt='illustration of a surfer' width='360px' />
+            </div>
+            <div>
+              <img src={perucoffee} alt='coffee bag with illustration' width='360px' />
+            </div>
+          </div>
+        </Link>
+
+        {/* IMAGE SLIDER ON MOBILE VIEW */}
+
+        <Link to='/portfolio'>
+          <div id="img-cf">
+            <div className="portfolio-text">PORTFOLIO</div>
             <img src={cocomoon} alt='cocomoon facial oil' width='360px' />
-          </div>
-          <div>
             <img src={notebook} alt='notebook prints' width='360px' />
-          </div>
-          <div>
             <img src={drowning} alt='illustration of a surfer' width='360px' />
-          </div>
-          <div>
             <img src={perucoffee} alt='coffee bag with illustration' width='360px' />
           </div>
-        </div>
-
-        {/* IMAGE SLIDER ONN MOBILE VIEW */}
-
-        <div id="img-cf">
-        <div className="portfolio-text">PORTFOLIO</div>
-          <img src={cocomoon} alt='cocomoon facial oil' width='360px' />
-          <img src={notebook} alt='notebook prints' width='360px' />
-          <img src={drowning} alt='illustration of a surfer' width='360px' />
-          <img src={perucoffee} alt='coffee bag with illustration' width='360px' />
-        </div>
+        </Link>
 
     </section>
   );

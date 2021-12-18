@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import MenuButton from "../MenuButton/MenuButton.components";
 
@@ -12,7 +13,9 @@ function Navigation() {
 		<nav>
 			<MenuButton />
 
-			<img src={logo} alt="Ariana Scalzo's logo" height='39px' />
+			<Link to='/'>
+				<img src={logo} alt="Ariana Scalzo's logo" height='39px' />
+			</Link>
 			
 			<ul>
         <li>

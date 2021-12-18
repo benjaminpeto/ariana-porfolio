@@ -186,8 +186,7 @@
         animation-name: cf4FadeInOut;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
-        animation-duration: 10s;
-        animation-direction: alternate;
+        animation-duration: 8s;
         width: 100%;
           
         @keyframes cf4FadeInOut {
@@ -195,16 +194,16 @@
             opacity:1;
           }
           17% {
-            opacity:0;
+            opacity:1;
           }
           25% {
-            opacity:1;
+            opacity:0;
           }
           92% {
             opacity:0;
           }
           100% {
-            opacity:0;
+            opacity:1;
           }
         }
 

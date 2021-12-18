@@ -13,7 +13,9 @@ function PortfolioPage() {
     <div className="page-wrapper">
       <nav>
         <MenuButton />
-        <img src={logo} alt="Ariana Scalzo's logo" height='39px' />
+        <Link to='/'>
+          <img src={logo} alt="Ariana Scalzo's logo" height='39px' />
+        </Link>
       </nav>
 
       <div className="portfolio-page">
