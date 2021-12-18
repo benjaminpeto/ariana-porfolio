@@ -61,6 +61,10 @@ nav {
       text-decoration: none;
       padding: 9px 0;
       color: #87614E;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
