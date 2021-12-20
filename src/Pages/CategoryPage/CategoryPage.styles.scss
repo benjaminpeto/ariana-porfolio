@@ -1,0 +1,32 @@
+.category-wrapper {
+  height: calc(100vh - 107px);
+  
+  .react-3d-carousel {
+    padding-top: 80px;
+
+    .slider-container {
+
+      .slider-left > div,
+      .slider-right > div {
+        top: 90%;
+        color: rgb(145, 107, 67);
+        border: none;
+        font-size: 40px;
+      }
+
+      .slider-content > .slider-single {
+        
+        .slider-single-content {
+          box-shadow: none;
+
+          .image-wrapper {
+            h1 {
+              text-align: center;
+              font-size: 40px;
+            }
+          }
+        }
+      } 
+    }
+  } 
+}
