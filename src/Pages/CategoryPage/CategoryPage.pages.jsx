@@ -15,16 +15,16 @@ class CategoryPage extends React.Component {
   render() {
     let slides = [
       <div className="image-wrapper">
-        <img  src={baker} alt="1" height={700} />
-        <h1>baker</h1>
+        <img  src={baker} alt="1" height={600} />
+        <h1>Baker & Spice</h1>
       </div>,
       <div className="image-wrapper">
-        <img  src={benji} alt="1" height={700} />
-        <h1>benji</h1>
+        <img  src={benji} alt="1" height={600} />
+        <h1>Benjamin Peto</h1>
       </div>,
       <div className="image-wrapper">
-        <img  src={coco} alt="1" height={700} />
-        <h1>coco</h1>
+        <img  src={coco} alt="1" height={600} />
+        <h1>Coco Moon</h1>
       </div>
     ];
 
