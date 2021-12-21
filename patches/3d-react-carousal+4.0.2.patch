@@ -1,0 +1,27 @@
+diff --git a/node_modules/3d-react-carousal/src/index.js b/node_modules/3d-react-carousal/src/index.js
+index 35aa850..2242640 100644
+--- a/node_modules/3d-react-carousal/src/index.js
++++ b/node_modules/3d-react-carousal/src/index.js
+@@ -1,5 +1,7 @@
+ import React, { useState, useEffect, useRef, useCallback } from 'react';
+ import { useSwipeable } from 'react-swipeable';
++import { MdOutlineArrowBackIos } from '../../react-icons/md';
++import { MdOutlineArrowForwardIos } from '../../react-icons/md';
+ import PropTypes from 'prop-types';
+ import './styles/style.scss';
+ 
+@@ -186,12 +188,12 @@ export function Carousel(props) {
+                                 <div className={slider.class} key={index}>
+                                     <div className={sliderClass('left')} onClick={slideLeft}>
+                                         <div>
+-                                            <i className="fa fa-arrow-left"></i>
++                                          <MdOutlineArrowBackIos />
+                                         </div>
+                                     </div>
+                                     <div className={sliderClass('right')} onClick={slideRight}>
+                                         <div >
+-                                            <i className="fa fa-arrow-right"></i>
++                                          <MdOutlineArrowForwardIos />
+                                         </div>
+                                     </div>
+ 
