@@ -21,9 +21,7 @@ function App() {
         <Route path="/portfolio" element={<PortfolioLayout />}>
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/portfolio" element={<FullLayout />}>
-            <Route path="/portfolio/ux-ui" element={<CategoryPage />} />
-            <Route path="/portfolio/branding" element={<CategoryPage />} />
-            <Route path="/portfolio/illustrations" element={<CategoryPage />} />
+            <Route path="/portfolio/:category" element={<CategoryPage />} />
           </Route>
         </Route>
       </Routes>
