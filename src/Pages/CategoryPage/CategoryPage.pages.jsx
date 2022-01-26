@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { brandingImages, illustrationImages} from './carouselData';
 
@@ -16,7 +17,9 @@ function CategoryPage() {
         {
           brandingImages.map((image) => (
             <div key={image.id}>
-              <h1>{image.title}</h1>
+              <Link to={`/portfolio/branding/${image.title.toLowerCase().replace(/ /g, "-")}`}>
+                <h1>{image.title}</h1>
+              </Link>
               <img src={image.image} alt='' />
             </div>
           ))
@@ -27,7 +30,9 @@ function CategoryPage() {
     {
       illustrationImages.map((image) => (
         <div key={image.id}>
-          <h1>{image.title}</h1>
+          <Link to={`/portfolio/illustrations/${image.title.toLowerCase().replace(/ /g, "-")}`}>
+            <h1>{image.title}</h1>
+          </Link>
           <img src={image.image} alt='' />
         </div>
       ))
