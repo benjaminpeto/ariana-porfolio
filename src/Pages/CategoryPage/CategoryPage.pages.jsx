@@ -16,7 +16,6 @@ function CategoryPage() {
         {
           brandingImages.map((image) => (
             <div key={image.id}>
-            
               <h1>{image.title}</h1>
               <img src={image.image} alt='' />
             </div>
