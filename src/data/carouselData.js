@@ -40,22 +40,22 @@ export const category = [
   {
     id: 5,
     cat: 'illustrations',
+    url: 'day-dreaming',
+    title: 'Day Dreaming',
+    image: mask 
+  },
+  {
+    id: 6,
+    cat: 'illustrations',
     url: 'saladita-studio',
     title: 'Saladita Studio',
     image: saladita 
   },
   {
-    id: 6,
-    cat: 'illustrations',
-    url: 'mask',
-    title: 'Mask',
-    image: mask 
-  },
-  {
     id: 7,
     cat: 'illustrations',
-    url: 'kaka-maki',
-    title: 'Kaka Maki',
+    url: 'surf-&-soul',
+    title: 'Surf & Soul',
     image: saladita 
   }
 ]

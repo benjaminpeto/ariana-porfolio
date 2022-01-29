@@ -19,3 +19,5 @@ const TopicPage = ({topicData}) => {
 }
 
 export default TopicPage;
+
+//* INDIVIDUAL PAGES FOR THE DESIGNS */
