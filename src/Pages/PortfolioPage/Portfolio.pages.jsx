@@ -9,7 +9,6 @@ import logo from '../../assets/AS LOGO.webp';
 import './Portfolio.styles.scss';
 
 function PortfolioPage() {
-  
   return (
     <div className="page-wrapper">
       <nav>

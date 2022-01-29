@@ -26,7 +26,7 @@ function App() {
           <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/portfolio" element={<FullLayout />}>
               <Route path=":categoryUrl" element={<CategoryPage category={category} />} />
-              <Route path=":title" element={<TopicPage topicData={topicData} />} />
+              <Route path=":categoryUrl/:title" element={<TopicPage topicData={topicData} />} />
             </Route>
         </Route>
       </Routes>

@@ -1,21 +1,19 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const TopicPage = ({topicData}) => {
-  const { title } = useParams();
-  
+  const location = useLocation();
+
   return (
     <>
-      <h2 style={{ paddingTop:'100px'}}>topicxxxxx</h2>
-        <ul>
-          {topicData.filter(topic => topic.title === title).map(filteredTopic => 
-            <div key={filteredTopic.id}>
-              <h1>{filteredTopic.title}</h1>
-              <h4>{filteredTopic.subtitle}</h4>
-              <p>{filteredTopic.description}</p>
-            </div>
-          )}
-        </ul>
+      {
+        topicData.filter(match => location.pathname === match.path).map(topic => 
+          <div key={topic.id} style={{padding:'100px 50px'}}>
+            <h1 style={{fontSize:'45px', padding:'20px 50px'}}>{topic.title}</h1>
+            <h4 style={{fontSize:'25px', padding:'20px 50px'}}>{topic.subtitle}</h4>
+            <p style={{padding:'20px 50px'}}>{topic.description}</p>
+          </div>
+      )}
     </>
   );
 }
