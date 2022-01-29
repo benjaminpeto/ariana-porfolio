@@ -9,6 +9,9 @@ import Contact from "./Pages/ContactPage/Contact.pages";
 import CategoryPage from "./Pages/CategoryPage/CategoryPage.pages";
 import TopicPage from "./Pages/TopicPage/Topic.pages";
 
+import { category } from './data/carouselData';
+import { topicData } from "./data/topicData";
+
 import './App.scss';
 
 function App() {
@@ -21,10 +24,10 @@ function App() {
         </Route>
         <Route path="/portfolio" element={<PortfolioLayout />}>
           <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/portfolio" element={<FullLayout />}>
-            <Route path="/portfolio/:category" element={<CategoryPage />} />
-            <Route path="/portfolio/:category/:topic" element={<TopicPage />} />
-          </Route>
+            <Route path="/portfolio" element={<FullLayout />}>
+              <Route path=":categoryUrl" element={<CategoryPage category={category} />} />
+              <Route path=":title" element={<TopicPage topicData={topicData} />} />
+            </Route>
         </Route>
       </Routes>
     </div>
