@@ -14,11 +14,10 @@ const CategoryPage = ({category}) => {
   else {
     return (
       <>
-        <h2 style={{ paddingTop:'100px'}}>Categories</h2>
-        <ul>
+        <ul style={{ paddingTop:'100px'}}>
           {category.filter(item => item.cat === categoryUrl).map(filteredItem => 
             <li key={filteredItem.id}>
-              <Link to={`/portfolio/${filteredItem.cat}/${filteredItem.url}`}>
+              <Link style={{fontSize: '40px'}} to={`/portfolio/${filteredItem.cat}/${filteredItem.url}`}>
                 {filteredItem.title}
               </Link>
             </li>

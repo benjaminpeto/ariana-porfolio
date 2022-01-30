@@ -45,16 +45,16 @@ function AboutSection() {
           <div className="image-wrapper">
             <div className="portfolio-text">PORTFOLIO</div>
             <div>
-              <img src={cocomoon} alt='cocomoon facial oil' width='360px' />
+              <img src={cocomoon} alt='cocomoon facial oil' width='500px' />
             </div>
             <div>
-              <img src={notebook} alt='notebook prints' width='360px' />
+              <img src={notebook} alt='notebook prints' width='500px' />
             </div>
             <div>
-              <img src={drowning} alt='illustration of a surfer' width='360px' />
+              <img src={drowning} alt='illustration of a surfer' width='500px' />
             </div>
             <div>
-              <img src={perucoffee} alt='coffee bag with illustration' width='360px' />
+              <img src={perucoffee} alt='coffee bag with illustration' width='500px' />
             </div>
           </div>
         </Link>

@@ -1,3 +1,10 @@
+import coco1 from '../assets/coco moon branding copy.webp';
+import coco2 from '../assets/coco moon facial niht oils.webp';
+import coco3 from '../assets/coco moon hair spray.webp';
+import coco4 from '../assets/coco moon loo.webp';
+import coco5 from '../assets/coco pool ipad_.webp';
+
+
 export const topicData = [
   {
     id: '101',
@@ -5,7 +12,7 @@ export const topicData = [
     path: '/portfolio/branding/coco-moon',
     subtitle: 'branding, packaging design & concept design',
     description: "Coco Moon is a natural and organic skincare brand, committed to setting new standards in the world of self care, using only the finest ingredients in their range. Coco Moon strives to enforce sustainable and ethical practices across all people, animals and land evolved. Valuing the brand's mission, all visual points from the logo, identity system to sustainable packaging solutions using innovative materials, speak a univeral language of elevated design, sustainability and self-expression. Coco Moon is inspired by the moons lunar phases and strives off the energy it gives off to the earth. The brand tailors its product to each lunar phase to how its monthly journey effects our personalities, outlooks and lives. Coco Moon encourages awareness of the moons four main stages and four intermediate phases,  awakening a new understaning of ourselves and its power.",
-    images: []
+    images: [coco1, coco2, coco3, coco4, coco5]
   },
   {
     id: '102',

@@ -1,20 +1,27 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
+import './TopicPage.styles.scss';
+
 const TopicPage = ({topicData}) => {
   const location = useLocation();
 
   return (
-    <>
+    <div className='topic-page-container'>
       {
         topicData.filter(match => location.pathname === match.path).map(topic => 
-          <div key={topic.id} style={{padding:'100px 50px'}}>
-            <h1 style={{fontSize:'45px', padding:'20px 50px'}}>{topic.title}</h1>
-            <h4 style={{fontSize:'25px', padding:'20px 50px'}}>{topic.subtitle}</h4>
-            <p style={{padding:'20px 50px'}}>{topic.description}</p>
+          <div key={topic.id}>
+            <h1>{topic.title}</h1>
+            <h3>{topic.subtitle}</h3>
+            <p>{topic.description}</p>
+            {
+              topic.images.map((img, idx) => (
+                <img key={idx} alt='' src={img} className='responsive'/>
+              ))
+            }
           </div>
       )}
-    </>
+    </div>
   );
 }
 
