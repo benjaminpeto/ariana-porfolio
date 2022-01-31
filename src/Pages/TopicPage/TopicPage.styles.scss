@@ -11,7 +11,7 @@
       text-align: center;
       font-family: Solar Vesta Serif;
       color: #AB7C65;
-      margin: 15px 0;
+      margin: 25px 0;
     }
 
     h1 {
@@ -32,6 +32,37 @@
     .responsive {
         width: 100%;
         height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .topic-page-container {
+    padding: 100px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topic-page-container {
+    padding: 70px 60px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .topic-page-container {
+    padding: 70px 30px;
+
+    div {
+
+      h1 {
+        font-size: 24px;
+      }
+      h3 {
+        font-size: 15px;
+      }
+      p {
+        font-size: 12px;
+      }
     }
   }
 }

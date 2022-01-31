@@ -11,7 +11,7 @@ import './Portfolio.styles.scss';
 function PortfolioPage() {
   return (
     <div className="page-wrapper">
-      <nav>
+      <nav className="navbar">
         <MenuButton />
         <Link to='/'>
           <img src={logo} alt="Ariana Scalzo's logo" height='39px' />
