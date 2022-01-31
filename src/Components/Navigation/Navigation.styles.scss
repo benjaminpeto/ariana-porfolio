@@ -71,6 +71,16 @@
 
 .navbar.colorChange {
   background-color: #f6f4e9;
+  animation: slideDown 700ms ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    top: -72px;
+  }
+  to {
+    top: 0;
+  }
 }
 
 @media screen and (max-width: 600px) {
