@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import MenuButton from "../MenuButton/MenuButton.components";
@@ -9,6 +9,7 @@ import logo from '../../assets/AS LOGO.webp';
 
 function Navigation() {
 	const [colorChange, setColorchange] = useState(false);
+	
   const changeNavbarColor = () => {
   	if(window.scrollY >= 50){
     	setColorchange(true);
@@ -17,7 +18,14 @@ function Navigation() {
       setColorchange(false);
     }
   };
-  window.addEventListener('scroll', changeNavbarColor);
+
+	useEffect(() => {
+		let abortController = new AbortController();  
+		window.addEventListener('scroll', changeNavbarColor);
+		return () => {  
+			abortController.abort();  
+			}  
+	}, []);
 
 	return (
 		<nav className={colorChange ? 'navbar colorChange' : 'navbar'}>
