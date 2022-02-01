@@ -10,22 +10,23 @@ import logo from '../../assets/AS LOGO.webp';
 function Navigation() {
 	const [colorChange, setColorchange] = useState(false);
 	
-  const changeNavbarColor = () => {
-  	if(window.scrollY >= 50){
-    	setColorchange(true);
-   	}
-  	else{
-      setColorchange(false);
-    }
-  };
-
 	useEffect(() => {
-		let abortController = new AbortController();  
+		let isSubscribed = true; // using a flag to determine when to cancel subscription and avoid memory leak, useEffect clean up function
+		const changeNavbarColor = () => {
+			if (isSubscribed) {
+				if(window.scrollY >= 50) {
+					setColorchange(true);
+				}
+				else {
+					setColorchange(false);
+				}
+			};
+		}
 		window.addEventListener('scroll', changeNavbarColor);
 		return () => {  
-			abortController.abort();  
-			}  
-	}, []);
+			isSubscribed = false;
+		}
+	},[]);
 
 	return (
 		<nav className={colorChange ? 'navbar colorChange' : 'navbar'}>
