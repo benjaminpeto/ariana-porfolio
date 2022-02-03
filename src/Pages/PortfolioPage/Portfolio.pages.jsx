@@ -8,7 +8,7 @@ import logo from '../../assets/AS LOGO.webp';
 
 import './Portfolio.styles.scss';
 
-function PortfolioPage() {
+const PortfolioPage = (props) => {
   return (
     <div className="page-wrapper">
       <nav className="navbar">

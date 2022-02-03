@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 
 import WebDesign from '../WebDesignPage/WebDesign.pages';
 
-const CategoryPage = ({category}) => {
+const CategoryPage = ({ category }, props) => {
   const { categoryUrl } = useParams();
 
   if (categoryUrl === 'ux-ui') {

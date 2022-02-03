@@ -5,7 +5,7 @@ import Modal from '../../Components/Modal/Modal.components';
 
 import './Contact.styles.scss';
 
-const Contact = () => {
+const Contact = (props) => {
   const form = useRef();
 
   const [modalOpen, setModalOpen] = useState(false);

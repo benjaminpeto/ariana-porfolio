@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 import './TopicPage.styles.scss';
 
-const TopicPage = ({topicData}) => {
+const TopicPage = ({ topicData }, props) => {
   const location = useLocation();
 
   return (

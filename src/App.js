@@ -8,30 +8,33 @@ import Portfolio from "./Pages/PortfolioPage/Portfolio.pages";
 import Contact from "./Pages/ContactPage/Contact.pages";
 import CategoryPage from "./Pages/CategoryPage/CategoryPage.pages";
 import TopicPage from "./Pages/TopicPage/Topic.pages";
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop.components";
 
-import { category } from './data/carouselData';
+import { category } from "./data/carouselData";
 import { topicData } from "./data/topicData";
 
-import './App.scss';
+import "./App.scss";
 
 function App() {
-  return (
-    <div className="App">
-      <Routes>
-        <Route path="/*" element={<FullLayout />}>
-          <Route index element={<HomePage />} />
-          <Route path="contact" element={<Contact />} />
-        </Route>
-        <Route path="/portfolio" element={<PortfolioLayout />}>
-          <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/portfolio" element={<FullLayout />}>
-              <Route path=":categoryUrl" element={<CategoryPage category={category} />} />
-              <Route path=":categoryUrl/:title" element={<TopicPage topicData={topicData} />} />
-            </Route>
-        </Route>
-      </Routes>
-    </div>
-  );
+	return (
+		<div className="App">
+			<ScrollToTop>
+				<Routes>
+					<Route path="/*" element={<FullLayout />}>
+						<Route index element={<HomePage />} />
+						<Route path="contact" element={<Contact />} />
+					</Route>
+					<Route path="/portfolio" element={<PortfolioLayout />}>
+						<Route path="/portfolio" element={<Portfolio />} />
+						<Route path="/portfolio" element={<FullLayout />}>
+							<Route path=":categoryUrl" element={<CategoryPage category={category} />} />
+							<Route path=":categoryUrl/:title" element={<TopicPage topicData={topicData} />} />
+						</Route>
+					</Route>
+				</Routes>
+			</ScrollToTop>
+		</div>
+	);
 }
 
 export default App;
