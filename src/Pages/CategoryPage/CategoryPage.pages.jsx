@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
+import CarouselSlide from "../../Components/CarouselSlide/CarouselSlide.components";
 
 import WebDesign from "../WebDesignPage/WebDesign.pages";
 
@@ -15,7 +16,7 @@ const CategoryPage = ({ category }, props) => {
 		return (
 			<>
 				<div className="category-page-wrapper">
-					{category.filter((item) => item.cat === categoryUrl).map((filteredItem) => (
+					{/* {category.filter((item) => item.cat === categoryUrl).map((filteredItem) => (
             <div key={filteredItem.id}>
 								<Link
 									style={{ fontSize: "40px" }}
@@ -23,7 +24,8 @@ const CategoryPage = ({ category }, props) => {
 									{filteredItem.title}
                 </Link>
 							</div>
-						))}
+						))} */}
+            <CarouselSlide />
 				</div>
 			</>
 		);

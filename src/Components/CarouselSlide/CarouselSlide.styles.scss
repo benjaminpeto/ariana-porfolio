@@ -1,0 +1,66 @@
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 107px;
+
+  .image-gallery {
+    width: 60%;
+    height: 60%;
+
+    .image-gallery-content .image-gallery-slide-wrapper .image-gallery-icon {
+      z-index: 10 !important;
+      top: 110%;
+      color: #CCB0A2;
+      filter: none;
+    }
+
+    .image-gallery-slides {
+      overflow: visible;
+
+      .image-gallery-description {
+        background: none;
+        font-size: 36px;
+        font-family: Solar Vesta Serif;
+        bottom: -80px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #87614E;
+        cursor: pointer;
+        transition: all 1s ease-in-out;
+        opacity: 1;
+      }
+
+      .center {
+        z-index: 5 !important;
+      }
+
+      .left {
+        transform: translate3d(-20%, -70px, 0px) !important;
+        opacity: 30%;
+
+        .image-gallery-description {
+          display: none;
+        }
+      }
+
+      .right {
+        transform: translate3d(20%, -70px, 0px) !important;
+        opacity: 30%;
+
+        .image-gallery-description {
+          display: none;
+        }
+      }
+
+      img {
+        width: 50%;
+        height: 500px;
+        object-fit: contain;
+        overflow: hidden;
+        object-position: center center;
+        padding: 0 40px;
+      }
+    }
+  }
+}

@@ -22,6 +22,9 @@
   font-weight: normal;
 }
 
+// Import react-image-gallery styles
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+
 // Resetting default CSS styling
 html {
   scroll-behavior: smooth;
