@@ -1,5 +1,5 @@
 import ImageGallery from 'react-image-gallery';
-
+import { Link } from 'react-router-dom';
 import './CarouselSlide.styles.scss';
 
 import saladita1 from '../../assets/carousel-saladita studio.png';
@@ -12,23 +12,19 @@ const CarouselSlide = () => {
 	const images = [
     {
       original: saladita1,
-      sizes: '140',
-      description: 'cocomoon'
+      description: <Link className='links' to='/portfolio/branding/coco-moon'>coco moon</Link>
     },
     {
       original: saladita2,
-      sizes: '140',
-      description: 'benji'
+      description: <Link className='links' to='/portfolio/branding/benjamin-peto'>Benjamin peto</Link>
     },
     {
       original: saladita3,
-      sizes: '140',
-      description: 'saladita'
+      description: <Link className='links' to='/portfolio/branding/baker-&-spice'>Baker & Spice</Link>
     },
     {
       original: saladita4,
-      sizes: '140',
-      description: 'sicily'
+      description: <Link className='links' to='/portfolio/branding/sicily-restaurant'>Sicily Restaurant</Link>
     },
   ];
 
