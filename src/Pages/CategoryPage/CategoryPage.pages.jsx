@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import CarouselSlide from "../../Components/CarouselSlide/CarouselSlide.components";
 
 import WebDesign from "../WebDesignPage/WebDesign.pages";
@@ -12,6 +12,7 @@ const CategoryPage = ({ category }, props) => {
 	if (categoryUrl === "ux-ui") {
 		return <WebDesign />;
 	}
+
   else {
 		return (
 			<>
