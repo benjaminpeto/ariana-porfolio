@@ -1,57 +1,44 @@
-import saladita1 from '../assets/carousel-saladita studio.png';
-import saladita2 from '../assets/carousel-saladita studio1.png';
-import saladita3 from '../assets/carousel-saladita studio 2.png';
-import saladita4 from '../assets/carousel-saladita studio 3.png';
-
-
 export const category = [
   {
     id: 1,
     cat: 'branding',
     url: 'baker-&-spice',
-    title: 'Baker & Spice',
-    image: saladita1
+    title: 'Baker & Spice'
   },
   {
     id: 2,
     cat: 'branding',
     url: 'coco-moon',
-    title: 'Coco Moon',
-    image: saladita2
+    title: 'Coco Moon'
   },
   {
     id: 3,
     cat: 'branding',
     url: 'benjamin-peto',
-    title: 'Benjamin Peto',
-    image: saladita3
+    title: 'Benjamin Peto'
   },
   {
     id: 4,
     cat: 'branding',
     url: 'sicily-restaurant',
-    title: 'Sicily Restaurant',
-    image: saladita4
+    title: 'Sicily Restaurant'
   },
   {
     id: 5,
     cat: 'illustrations',
     url: 'day-dreaming',
-    title: 'Day Dreaming',
- /*    image:   */
+    title: 'Day Dreaming'
   },
   {
     id: 6,
     cat: 'illustrations',
     url: 'saladita-studio',
-    title: 'Saladita Studio',
- /*    image:   */
+    title: 'Saladita Studio'
   },
   {
     id: 7,
     cat: 'illustrations',
     url: 'surf-&-soul',
-    title: 'Surf & Soul',
- /*    image:   */
+    title: 'Surf & Soul'
   }
 ]

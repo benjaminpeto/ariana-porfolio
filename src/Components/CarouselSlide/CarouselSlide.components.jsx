@@ -2,10 +2,13 @@ import ImageGallery from 'react-image-gallery';
 import { Link, useParams } from 'react-router-dom';
 import './CarouselSlide.styles.scss';
 
-import saladita1 from '../../assets/carousel-saladita studio.png';
-import saladita2 from '../../assets/carousel-saladita studio1.png';
-import saladita3 from '../../assets/carousel-saladita studio 2.png';
-import saladita4 from '../../assets/carousel-saladita studio 3.png';
+import bakerSpice from '../../assets/carousel/baker&spice-branding.webp';
+import cocoMoon from '../../assets/carousel/cocomoon-branding.webp';
+import benji from '../../assets/carousel/pb-branding.webp';
+import sicily from '../../assets/carousel/sicily-branding.webp';
+import saladita from '../../assets/carousel/saladitastudio-illustration.webp';
+import dayDreaming from '../../assets/carousel/daydreaming-illustration.webp';
+import surfSoul from '../../assets/carousel/surfnsoul-illustration.webp';
 
 const CarouselSlide = (props) => {
 
@@ -13,34 +16,34 @@ const CarouselSlide = (props) => {
 
 	const imagesBranding = [
     {
-      original: saladita1,
+      original: cocoMoon,
       description: <Link className='links' to='/portfolio/branding/coco-moon'>coco moon</Link>
     },
     {
-      original: saladita2,
+      original: benji,
       description: <Link className='links' to='/portfolio/branding/benjamin-peto'>Benjamin peto</Link>
     },
     {
-      original: saladita3,
+      original: bakerSpice,
       description: <Link className='links' to='/portfolio/branding/baker-&-spice'>Baker & Spice</Link>
     },
     {
-      original: saladita4,
+      original: sicily,
       description: <Link className='links' to='/portfolio/branding/sicily-restaurant'>Sicily Restaurant</Link>
     },
   ];
 
   const imagesIllustrations = [
     {
-      original: saladita2,
+      original: dayDreaming,
       description: <Link className='links' to='/portfolio/illustrations/day-dreaming'>Day dreaming</Link>
     },
     {
-      original: saladita3,
+      original: saladita,
       description: <Link className='links' to='/portfolio/illustrations/saladita-studio'>saladita studio</Link>
     },
     {
-      original: saladita4,
+      original: surfSoul,
       description: <Link className='links' to='/portfolio/illustrations/surf-&-soul'>surf & soul</Link>
     },
   ];
