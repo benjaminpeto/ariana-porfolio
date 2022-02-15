@@ -13,6 +13,7 @@ const Contact = (props) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [validated, setValidated] = useState(true);
 
   const onNameChange = (event) => {
     setName(event.target.value);
@@ -28,26 +29,28 @@ const Contact = (props) => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    console.log('email---->', email);
     
     if (!name || !email || !message) {
-      alert('You must fill out every field!');
+      setValidated(false);
+      /* alert('You must fill out every field!'); */
     }
     else if (!isEmail(email)) {
-      alert("Email needs to be a valid address.");
+      setValidated(false);
+      /* alert("Email needs to be a valid address."); */
     }
     else {
       emailjs.sendForm('service_ID', 'template_ID', form.current, 'user_ID')
-        .then((result) => {
-            console.log(result.text);
-        }, (error) => {
-            console.log(error.text);
-        });
-        e.target.reset();
-        setModalOpen(true);
-    }
-  };
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+      e.target.reset();
+      setModalOpen(true);
+      setValidated(true);
+      }
+    };
+
 
   return (
     <section className="contact-wrapper">
@@ -64,14 +67,23 @@ const Contact = (props) => {
 
         <div className='name-email'>
           <label>Name</label>
-          <input type="text" name="user_name" placeholder="Name" onChange={onNameChange} />
+          <input type="text" name="user_name" placeholder="Name" onChange={onNameChange} className={validated ? '' : 'red-border'} />
           <label>Email</label>
-          <input type="email" name="user_email" placeholder="Email" onChange={onEmailChange} />
+          <input type="email" name="user_email" placeholder="Email" onChange={onEmailChange} className={validated ? '' : 'red-border'} />
         </div>
 
         <div className='message-div'>
           <label>Message</label>
-          <textarea name="message" placeholder="Write your message..." onChange={onMessageChange} />
+          <textarea name="message" placeholder="Write your message..." onChange={onMessageChange} className={validated ? '' : 'red-border'} />
+          {
+            !validated &&
+            <div className='warning-msg'>
+              <svg xmlns="http://www.w3.org/2000/svg" className="warning-svg" fill="none" viewBox="0 0 24 24" stroke="#b30000">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+              <p className='warning-paragraph'>Please fill out all the fields and enter a valid email address.</p>
+            </div>
+          }
           <input type="submit" value="SUBMIT" />
         </div>
 

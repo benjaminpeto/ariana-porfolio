@@ -45,6 +45,9 @@
           border: 2px solid #87614E;
         }
       }
+      .red-border {
+        border: solid #b30000 2px !important;
+      }
     }
 
     .message-div {
@@ -72,6 +75,29 @@
         &:focus {
           outline: none;
           border: 2px solid #87614E;
+        }
+      }
+
+      .red-border {
+        border: solid #b30000 2px !important;
+      }
+
+      .warning-msg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+        gap: 10px;
+
+        .warning-svg {
+          width: 5%;
+          height: auto;
+        }
+
+        .warning-paragraph {
+          color: #b30000;
+          font-family: 'Expletus Sans', sans-serif;
+          font-size: 14px;
         }
       }
 
@@ -147,6 +173,13 @@
         input {
           padding: 15px 0 12px 0;
           width: 100%;
+        }
+
+        .warning-msg {
+          .warning-svg {
+            width: 10%;
+            height: auto;
+          }
         }
       }
     }
