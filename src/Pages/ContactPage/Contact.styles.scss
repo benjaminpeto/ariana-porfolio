@@ -198,3 +198,22 @@
     }
   }
 }
+
+@media screen and (max-width: 400px) {
+  .contact-wrapper{
+
+    h1 {
+      padding-top: 50px;
+    }
+
+    form .name-email {
+      margin-top: 10px;
+    }
+
+    .contact-info {
+      font-size: 14px;
+      font-family: 'Expletus Sans', sans-serif;
+      margin-top: 24px;
+    }
+  }
+}

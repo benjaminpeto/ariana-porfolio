@@ -141,6 +141,10 @@
 		position: relative;
 		display: flex;
 
+		.link-wrapper {
+			padding-top: 67px;
+		}
+
 		.carousel {
 			position: absolute;
 			width: 100%;
