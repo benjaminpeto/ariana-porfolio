@@ -27,6 +27,12 @@ const Contact = (props) => {
     setMessage(event.target.value);
   };
 
+  const resetInputField = () => {
+    setName('');
+    setEmail('');
+    setMessage('');
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
     
@@ -45,9 +51,9 @@ const Contact = (props) => {
       }, (error) => {
         console.log(error.text);
       });
-      e.target.reset();
-      setModalOpen(true);
+      resetInputField();
       setValidated(true);
+      setModalOpen(true);
       }
     };
 
@@ -67,14 +73,14 @@ const Contact = (props) => {
 
         <div className='name-email'>
           <label>Name</label>
-          <input type="text" name="user_name" placeholder="Name" onChange={onNameChange} className={validated ? '' : 'red-border'} />
+          <input type="text" name="user_name" placeholder="Name" value={name} onChange={onNameChange} className={validated ? '' : 'red-border'} />
           <label>Email</label>
-          <input type="email" name="user_email" placeholder="Email" onChange={onEmailChange} className={validated ? '' : 'red-border'} />
+          <input type="email" name="user_email" placeholder="Email" value={email} onChange={onEmailChange} className={validated ? '' : 'red-border'} />
         </div>
 
         <div className='message-div'>
           <label>Message</label>
-          <textarea name="message" placeholder="Write your message..." onChange={onMessageChange} className={validated ? '' : 'red-border'} />
+          <textarea name="message" placeholder="Write your message..." value={message} onChange={onMessageChange} className={validated ? '' : 'red-border'} />
           {
             !validated &&
             <div className='warning-msg'>

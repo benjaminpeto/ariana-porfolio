@@ -45,8 +45,9 @@
           border: 2px solid #87614E;
         }
       }
+
       .red-border {
-        border: solid #b30000 2px !important;
+        box-shadow: 0 0 5px 1px #b30000;
       }
     }
 
@@ -79,7 +80,7 @@
       }
 
       .red-border {
-        border: solid #b30000 2px !important;
+        box-shadow: 0 0 5px 1px #b30000;
       }
 
       .warning-msg {
