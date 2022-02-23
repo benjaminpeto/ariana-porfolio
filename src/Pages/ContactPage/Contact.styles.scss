@@ -201,19 +201,43 @@
 
 @media screen and (max-width: 400px) {
   .contact-wrapper{
+    padding-top: 110px;
 
     h1 {
-      padding-top: 50px;
+      padding-top: 0;
     }
 
-    form .name-email {
-      margin-top: 10px;
+    form {
+      .message-div input {
+        margin: 13px 0 0 0;
+      }
     }
 
     .contact-info {
       font-size: 14px;
       font-family: 'Expletus Sans', sans-serif;
-      margin-top: 24px;
+      margin-top: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .contact-wrapper{
+
+    form {
+
+      .name-email {
+        margin-top: 10px;
+      }
+    }
+
+    .contact-info {
+      font-size: 10px;
+      margin-top: 10px;
+
+      a {
+        margin-bottom: 1px;
+      }
     }
   }
 }

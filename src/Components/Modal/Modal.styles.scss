@@ -7,6 +7,7 @@
   border-radius: 5px;
   width: 60%;
   height: fit-content;
+  z-index: 100;
 
   .close-btn {
     width: 100%;
@@ -96,14 +97,18 @@
 }
 
 @media screen and (max-width: 400px) {
-  .modal > .body-wrapper {
-    .title > h1 {
-      font-size: 14px;
-    }
+  .modal {
+    height: 80%;
 
-    .body > p {
-      font-size: 10px;
-      line-height: 14px;
+    .body-wrapper {
+      .title > h1 {
+        font-size: 14px;
+      }
+
+      .body > p {
+        font-size: 10px;
+        line-height: 14px;
+      }
     }
   }
 }
