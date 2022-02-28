@@ -7,21 +7,43 @@
   justify-content: center;
   align-items: center;
 
+  .mask {
+    top: 0.5%;
+    width: 40%;
+    height: 80%;
+    z-index: 103;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background: url(../../assets/ari.webp) no-repeat 
+      center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  
+    mask-image: url('../../assets/ari-loading-img.png');
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
   .right-frame {
     width: 100%;
     height: 100%;
-    clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 25%, 25% 25%, 25% 75%, 0 75%, 0 100%, 100% 100%, 100% 0%);
+    //clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 25%, 25% 25%, 25% 75%, 0 75%, 0 100%, 100% 100%, 100% 0%);
     background-color: #CCB0A2;
   }
 
   .left-frame {
     width: 100%;
     height: 100%;
-    clip-path: polygon(0% 0%, 0% 100%, 75% 100%, 75% 25%, 100% 25%, 100% 75%, 75% 75%, 0 100%, 100% 100%, 100% 0%);
+    //clip-path: polygon(0% 0%, 0% 100%, 75% 100%, 75% 25%, 100% 25%, 100% 75%, 75% 75%, 0 100%, 100% 100%, 100% 0%);
     background-color: #87614E;
   }
 
   .svg-img {
     position: absolute;
+    z-index: 109;
   }
 }
