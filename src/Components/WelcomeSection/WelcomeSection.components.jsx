@@ -16,9 +16,9 @@ const WelcomeSection = (props) => {
   return (
     <>
       <div className='main-wrapper'>
-      {
-        visible && <PageLoadingAnimation />
-      }
+        {
+          visible && <PageLoadingAnimation />
+        }
         <h1>Ariana Scalzo</h1>
       </div>
     </>

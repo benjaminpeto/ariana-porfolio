@@ -1,49 +1,76 @@
 .loading-container {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   z-index: 102;
   position: absolute;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
-  .mask {
-    top: 0.5%;
-    width: 40%;
-    height: 80%;
+  .mask-wrapper {
+    width: 100vw;
+    height: 100vh;
     z-index: 103;
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
     background: url(../../assets/ari.webp) no-repeat 
-      center center fixed; 
+      center center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  
+    position: absolute;
     mask-image: url('../../assets/ari-loading-img.png');
     mask-repeat: no-repeat;
-    mask-position: center;
+    mask-position: center 30%;
   }
 
   .right-frame {
     width: 100%;
     height: 100%;
-    //clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 25%, 25% 25%, 25% 75%, 0 75%, 0 100%, 100% 100%, 100% 0%);
     background-color: #CCB0A2;
   }
 
   .left-frame {
     width: 100%;
     height: 100%;
-    //clip-path: polygon(0% 0%, 0% 100%, 75% 100%, 75% 25%, 100% 25%, 100% 75%, 75% 75%, 0 100%, 100% 100%, 100% 0%);
     background-color: #87614E;
   }
 
   .svg-img {
     position: absolute;
+    overflow: visible;
     z-index: 109;
+  }
+}
+
+@media screen and (max-width: 1560px) {
+  .loading-container {
+    .mask-wrapper{
+      mask-position: center 36%;
+    }
+  }
+}
+
+@media screen and (max-width: 1480px) {
+  .loading-container {
+    .mask-wrapper{
+      mask-position: center 40%;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .loading-container {
+    .mask-wrapper{
+      mask-position: center 38%;
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .loading-container {
+    .mask-wrapper{
+      mask-position: center 59%;
+    }
   }
 }

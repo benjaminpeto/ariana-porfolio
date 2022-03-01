@@ -30,9 +30,10 @@ const PageLoadingAnimation = (props) => {
     },
     up: {
       y: -1500,
+      scale: 0.3,
       transition: {
-        duration: 1,
-        delay: 3
+        duration: 1.5,
+        delay: 2
       }
     }
   }
@@ -47,7 +48,8 @@ const PageLoadingAnimation = (props) => {
           transition={{ duration: 2, delay: 2}}>
         </motion.div>
 
-        <div className='mask'></div>
+        <div className='mask-wrapper'>
+        </div>
 
           <motion.svg
             xmlns="http://www.w3.org/2000/svg"
