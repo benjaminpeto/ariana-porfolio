@@ -6,7 +6,9 @@
   position: absolute;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  
 
   .mask-wrapper {
     width: 100vw;
@@ -38,6 +40,7 @@
 
   .svg-img {
     position: absolute;
+    top: 30%;
     overflow: visible;
     z-index: 109;
   }

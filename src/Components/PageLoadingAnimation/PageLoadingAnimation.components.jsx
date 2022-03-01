@@ -27,14 +27,18 @@ const PageLoadingAnimation = (props) => {
         duration: 1.5,
         ease: 'easeInOut',
       }
-    },
-    up: {
-      y: -1500,
-      scale: 0.3,
+    }
+  }
+
+  const logoUp = {
+    hidden: {},
+    visible: {
+      y: -1251,
+      scale: 0,
       transition: {
         duration: 1.5,
-        delay: 2
-      }
+        delay: 1,
+      },
     }
   }
 
@@ -45,7 +49,7 @@ const PageLoadingAnimation = (props) => {
           className='left-frame'
           initial={{ x: 0 }}
           animate={{ x: '-50vw' }}
-          transition={{ duration: 2, delay: 2}}>
+          transition={{ duration: 1.5, delay: 2}}>
         </motion.div>
 
         <div className='mask-wrapper'>
@@ -57,9 +61,9 @@ const PageLoadingAnimation = (props) => {
             height="250"
             viewBox="0 0 1500 1318.34"
             className='svg-img'
-            variants={svgVariants}
+            variants={[svgVariants, logoUp]}
             initial="hidden"
-            animate={["visible", "up"]}
+            animate={"visible"}
           >
             <g id="Layer_4" dataname="Layer 4">
               <motion.path d="M1060.87,1318.34,631.09,549.84l-4.34,7.25L750,351,969.49,718.13l95.88-164.48L750,0,438.12,549.45l337.31,600.08-404,0,92.43,168.84Z" fill="#ab7d65" stroke="#ab7d65" variants={pathVariants} />
@@ -77,7 +81,7 @@ const PageLoadingAnimation = (props) => {
           className='right-frame'
           initial={{ x: 0 }}
           animate={{ x: '50vw' }}
-          transition={{ duration: 2, delay: 2}}>
+          transition={{ duration: 1.5, delay: 2}}>
         </motion.div>
       </div>
     </>
