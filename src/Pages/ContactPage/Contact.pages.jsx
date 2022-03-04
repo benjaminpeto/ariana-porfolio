@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import isEmail from "validator/lib/isEmail";
+import { motion } from 'framer-motion';
 
 import Modal from '../../Components/Modal/Modal.components';
 
@@ -57,18 +58,77 @@ const Contact = (props) => {
       }
     };
 
+    const headerText = "Let's work together!";
+
+    const sentence = {
+      hidden: {
+        opacity: 1
+      },
+      visible: {
+        opacity: 1,
+        transition: {
+          delay: 0.5,
+          staggerChildren: 0.08,
+        },
+      },
+    };
+  
+    const letter = {
+      hidden: {
+        opacity: 0,
+        y: 50,
+      },
+      visible: {
+        opacity: 1,
+        y: 0,
+      },
+    };
+
+    const formVariants = {
+      hidden: {
+        opacity: 0,
+        scale: 0
+      },
+      visible: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+          duration: 1.5,
+          ease: "easeInOut"
+        }
+      },
+    };
+
 
   return (
     <section className="contact-wrapper">
 
-      <h1>Let's work together!</h1>
+    <motion.h1
+      variants={sentence}
+      initial="hidden"
+      animate="visible">
+      {
+        headerText.split("").map((char, index) => {
+          return (
+            <motion.span
+              key={char + "-" + index}
+              variants={letter}>
+              {char}
+            </motion.span>
+          )
+        })
+      }
+    </motion.h1>
 
-      <form
+      <motion.form
         ref={form}
         onSubmit={(e) => {
           sendEmail(e);
         }}
         noValidate //removing default validation of HTML
+        variants={formVariants}
+        initial="hidden"
+        animate="visible"
       >
 
         <div className='name-email'>
@@ -93,13 +153,13 @@ const Contact = (props) => {
           <input type="submit" value="SUBMIT" />
         </div>
 
-      </form>
+      </motion.form>
 
-      <div className='contact-info'>
+      <motion.div className='contact-info' variants={formVariants} initial="hidden" animate="visible">
         <a href="mailto:arianascalzodees@gmail.com">arianascalzodees@gmail.com</a>
         <span>|</span>
         <p>Las Palmas, Canary Islands, Spain</p>
-      </div>
+      </motion.div>
 
       {modalOpen && <Modal setOpenModal={setModalOpen} />}
 
