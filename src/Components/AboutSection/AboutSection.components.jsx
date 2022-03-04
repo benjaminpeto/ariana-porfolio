@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Link } from "react-router-dom";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import resume from '../../data/ariana_scalzo_cv.pdf';
 
@@ -12,11 +14,125 @@ import perucoffee from '../../assets/Peru coffee.webp';
 import './AboutSection.styles.scss';
 
 function AboutSection() {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  const holaText = "Hola!";
+
+  const sentence = {
+    hidden: {
+      opacity: 1
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+        staggerChildren: 0.08,
+      },
+    },
+  };
+
+  const letter = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
+
+  const paragraphVariants = {
+    hidden: {
+      opacity: 0,
+      scale: 0.3
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delay: 0.3,
+        duration: 1.5,
+        ease: "easeInOut"
+      }
+    },
+  };
+
+  const buttonVariants = {
+    hidden: {
+      opacity: 0,
+      scale: 0
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delay: 0.6,
+        duration: 1.5,
+        ease: "easeIn"
+      }
+    },
+  };
+
+  const imageContainer = {
+    hidden: {
+      opacity: 0
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delay: 1.5,
+        staggerChildren: 0.5,
+        childrenDelay: 0.5
+      }
+    }
+  }
+
+  const containerItems = {
+    hidden: {
+      y: -400
+    },
+    visible: {
+      y: 0,
+      transition: {
+        duration: 2
+      }
+    },
+}
+
   return (
     <section className='about-wrapper'>
 
-        <h1>Hola!</h1>
-        <div className="paragraph-wrapper">
+        <motion.h1
+          variants={sentence}
+          initial="hidden"
+          animate={controls}>
+          {
+            holaText.split("").map((char, index) => {
+              return (
+                <motion.span
+                  ref={ref}
+                  key={char + "-" + index}
+                  variants={letter}>
+                  {char}
+                </motion.span>
+              )
+            })
+          }
+        </motion.h1>
+        <motion.div
+          className="paragraph-wrapper"
+          variants={paragraphVariants}
+          initial="hidden"
+          animate={controls}>
           <div>
             <p>
               I'm Ariana, a UX/UI | graphic designer who is passionate about providing interactive experiences and identities to forward thinking brands and companies worldwide.
@@ -35,28 +151,41 @@ function AboutSection() {
               I have an end-to-end understanding of project development from concept to solution, and from pitch to discussed implementation. I enjoy challenges and working to targets, planning ahead, problem solving and quick thinking. Creatively, I enjoy brainstorming and innovative ideas that exploit target market opportunities using advertising strategies that impact consumer buying trends. 
             </p>
           </div>
-        </div>
+        </motion.div>
 
         <div className="button-wrapper">
-          <a className='resume-btn' href={resume} download="ariana_scalzo_cv.pdf">RESUME</a>
+          <motion.a
+            className='resume-btn'
+            href={resume}
+            download="ariana_scalzo_cv.pdf"
+            variants={buttonVariants}
+            initial="hidden"
+            animate={controls}>
+            RESUME
+          </motion.a>
         </div>
 
         <Link to='/portfolio'>
-          <div className="image-wrapper">
+          <motion.div
+            variants={imageContainer}
+            initial="hidden"
+            animate={controls}
+            className='image-wrapper'
+          >
             <div className="portfolio-text">PORTFOLIO</div>
-            <div>
-              <img src={cocomoon} alt='cocomoon facial oil' width='500px' />
-            </div>
-            <div>
-              <img src={notebook} alt='notebook prints' width='500px' />
-            </div>
-            <div>
-              <img src={drowning} alt='illustration of a surfer' width='500px' />
-            </div>
-            <div>
-              <img src={perucoffee} alt='coffee bag with illustration' width='500px' />
-            </div>
-          </div>
+            <motion.div>
+              <img src={cocomoon} alt='cocomoon facial oil' width='500px' variants={containerItems} />
+            </motion.div>
+            <motion.div>
+              <img src={notebook} alt='notebook prints' width='500px' variants={containerItems} />
+            </motion.div>
+            <motion.div>
+              <img src={drowning} alt='illustration of a surfer' width='500px' variants={containerItems} />
+            </motion.div>
+            <motion.div>
+              <img src={perucoffee} alt='coffee bag with illustration' width='500px' variants={containerItems} />
+            </motion.div>
+          </motion.div>
         </Link>
 
         {/* IMAGE SLIDER ON MOBILE VIEW */}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import MenuButton from "../MenuButton/MenuButton.components";
 
@@ -28,8 +29,28 @@ function Navigation() {
 		}
 	},[]);
 
+	const navVariants = {
+		hidden: {
+      y: '-100%',
+			scale: 0
+    },
+    visible: {
+      y: 0,
+			scale: 1,
+      transition: {
+        duration: 1,
+				delay: 3.5
+      }
+    },
+	}
+
 	return (
-		<nav className={colorChange ? 'navbar colorChange' : 'navbar'}>
+		<motion.nav
+			className={colorChange ? 'navbar colorChange' : 'navbar'}
+			variants={navVariants}
+			initial="hidden"
+      animate="visible"
+		>
 			<MenuButton />
 
 			<Link to='/'>
@@ -50,7 +71,7 @@ function Navigation() {
 				</li>
       </ul>
 
-		</nav>
+		</motion.nav>
 	);
 }
 
