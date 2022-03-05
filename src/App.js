@@ -16,6 +16,7 @@ import { topicData } from "./data/topicData";
 import "./App.scss";
 
 function App() {
+
 	return (
 		<div className="App">
 			<ScrollToTop>

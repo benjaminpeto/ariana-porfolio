@@ -3,11 +3,10 @@
   height: 100vh;
   display: flex;
   z-index: 102;
-  position: absolute;
+  position: fixed;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
   
 
   .mask-wrapper {
