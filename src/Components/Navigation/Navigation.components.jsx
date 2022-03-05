@@ -10,6 +10,7 @@ import logo from '../../assets/AS LOGO.webp';
 
 function Navigation() {
 	const [colorChange, setColorchange] = useState(false);
+	/* const [willAnimate, setWillAnimate] = useState(true); */
 	
 	useEffect(() => {
 		let isSubscribed = true; // using a flag to determine when to cancel subscription and avoid memory leak, useEffect clean up function
@@ -28,6 +29,19 @@ function Navigation() {
 			isSubscribed = false;
 		}
 	},[]);
+
+	// MAKE CUSTOM HOOK of willAnimate
+
+  // PageLoadingAnimation loads only on first visit, again on new session
+ /*  useEffect(() => {
+    if(window.sessionStorage.getItem("firstLoadDone") === null) {
+      setWillAnimate(true);
+      window.sessionStorage.setItem("firstLoadDone", 1);
+    }
+    else {
+      setWillAnimate(false);
+    }
+  }, []); */
 
 	const navVariants = {
 		hidden: {

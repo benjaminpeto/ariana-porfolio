@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import PageLoadingAnimation from "../PageLoadingAnimation/PageLoadingAnimation.components";
@@ -6,6 +6,20 @@ import PageLoadingAnimation from "../PageLoadingAnimation/PageLoadingAnimation.c
 import './WelcomeSection.styles.scss';
 
 const WelcomeSection = (props) => {
+
+  const [willAnimate, setWillAnimate] = useState(true);
+
+  // PageLoadingAnimation loads only on first visit, again on new session
+  useEffect(() => {
+    if(window.sessionStorage.getItem("firstLoadDone") === null) {
+      setWillAnimate(true);
+      window.sessionStorage.setItem("firstLoadDone", 1);
+    }
+    else {
+      setWillAnimate(false);
+    }
+  }, []);
+  
 
   const headerVariants = {
     hidden: {
@@ -24,7 +38,9 @@ const WelcomeSection = (props) => {
 
   return (
     <>
-      <PageLoadingAnimation />
+      {
+        willAnimate && <PageLoadingAnimation />
+      }
       <div className='main-wrapper'>
         <motion.h1 
           variants={headerVariants}
