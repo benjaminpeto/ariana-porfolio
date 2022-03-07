@@ -1,5 +1,5 @@
 import ImageGallery from 'react-image-gallery';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import './CarouselSlide.styles.scss';
 
 import bakerSpice from '../../assets/carousel/baker&spice-branding.webp';
@@ -9,15 +9,18 @@ import sicily from '../../assets/carousel/sicily-branding.webp';
 import saladita from '../../assets/carousel/saladitastudio-illustration.webp';
 import dayDreaming from '../../assets/carousel/daydreaming-illustration.webp';
 import surfSoul from '../../assets/carousel/surfnsoul-illustration.webp';
+//import { category } from '../../data/carouselData';
 
 const CarouselSlide = (props) => {
 
   const { categoryUrl } = useParams();
 
+  //let navigate = useNavigate();
+
 	const imagesBranding = [
     {
       original: cocoMoon,
-      description: <Link className='links' to='/portfolio/branding/coco-moon'>coco moon</Link>
+      description: <Link className='links' to='/portfolio/branding/coco-moon'>coco moon</Link>,
     },
     {
       original: benji,
@@ -55,6 +58,7 @@ const CarouselSlide = (props) => {
         showThumbnails={false}
         showFullscreenButton={false}
         showPlayButton={false}
+        //onClick={() =>}
       />
 		</div>
 	);

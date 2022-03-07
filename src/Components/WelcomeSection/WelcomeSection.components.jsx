@@ -1,51 +1,41 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
+
+import useWillAnimate from "../../Hooks/useWillAnimate";
 
 import PageLoadingAnimation from "../PageLoadingAnimation/PageLoadingAnimation.components";
 
 import './WelcomeSection.styles.scss';
 
-const WelcomeSection = (props) => {
-
-  const [willAnimate, setWillAnimate] = useState(true);
-
-  // PageLoadingAnimation loads only on first visit, again on new session
-  useEffect(() => {
-    if(window.sessionStorage.getItem("firstLoadDone") === null) {
-      setWillAnimate(true);
-      window.sessionStorage.setItem("firstLoadDone", 1);
+const headerVariants = {
+  hidden: {
+    scale: 0,
+    opacity: 0
+  },
+  visible: {
+    scale: 1,
+    opacity:1,
+    transition: {
+      duration: 2,
+      when: "afterChildren"
     }
-    else {
-      setWillAnimate(false);
-    }
-  }, []);
-  
-
-  const headerVariants = {
-    hidden: {
-      scale: 0,
-      opacity: 0
-    },
-    visible: {
-      scale: 1,
-      opacity:1,
-      transition: {
-        duration: 2,
-        delay: 3
-      }
-    },
   }
+}
+
+const WelcomeSection = (props) => {
+  const shouldAnimate = useWillAnimate();
 
   return (
     <>
       {
-        willAnimate && <PageLoadingAnimation />
+        shouldAnimate && <PageLoadingAnimation />
       }
       <div className='main-wrapper'>
         <motion.h1 
           variants={headerVariants}
           initial="hidden"
-          animate="visible">Ariana Scalzo
+          animate="visible">
+          Ariana Scalzo
         </motion.h1>
       </div>
     </>

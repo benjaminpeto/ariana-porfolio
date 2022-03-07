@@ -4,8 +4,6 @@ import CarouselSlide from "../../Components/CarouselSlide/CarouselSlide.componen
 
 import WebDesign from "../WebDesignPage/WebDesign.pages";
 
-import "./CategoryPage.styles.scss";
-
 const CategoryPage = ({ category }, props) => {
 	const { categoryUrl } = useParams();
 

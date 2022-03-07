@@ -14,6 +14,13 @@
       color: #87614E;
       text-decoration: none;
       font-size: 36px;
+      transition: 200ms ease-in;
+
+			&:hover {
+				color: transparent;
+				-webkit-text-stroke-width: 1px;
+				-webkit-text-stroke-color: #87614e;
+			}
     }
 
     .image-gallery-content .image-gallery-slide-wrapper .image-gallery-icon {
@@ -25,6 +32,10 @@
 
     .image-gallery-slides {
       overflow: visible;
+
+      .image-gallery-slide > img {
+        cursor: pointer;
+      }
 
       .image-gallery-description {
         background: none;
