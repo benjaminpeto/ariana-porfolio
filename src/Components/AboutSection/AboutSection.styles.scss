@@ -1,5 +1,21 @@
 .about-wrapper {
 
+  .span-container {
+    width: 100vw;
+    height: 80vh;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+
+    span {
+      font-family: Solar Vesta Serif;
+      font-size: 72px;
+      color: #87614E4D;
+    }
+  }
+
   h1 {
     font-size: 48px;
     color: #AB7C65;
@@ -36,18 +52,19 @@
 
     .resume-btn {
       text-decoration: none;
-      font-family: Solar Vesta Serif;
-      font-size: 24px;
-      padding: 10px 15px 5px 15px;
+      font-family: 'Expletus Sans', sans-serif;
+      font-size: 20px;
+      padding: 15px 40px 13px 40px;
       color: #87614E;
-      border: 2px solid #87614E;
+      border: 1px solid #87614E;
       border-radius: 5px;
       cursor: pointer;
       transition: 200ms ease-in;
 
-      &:hover {
-        color: whitesmoke;
-        background-color: #87614E;
+      .download-btn {
+        margin-right: 10px;
+        padding-top: 4px;
+        color: #87614E;
       }
     }
   } 
@@ -59,6 +76,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 90px;
+    overflow: hidden;
 
     div > img {
       max-width: 100%;
@@ -77,6 +95,7 @@
       padding-top: 16px;
       letter-spacing: 80px;
       padding-left: 50px;
+      z-index: 2;
     }
   }
 
@@ -114,6 +133,10 @@
   .about-wrapper {
     height: 100%;
 
+    .span-container {
+      height: 100vh;
+    }
+
     h1 {
       margin: 0 auto;
       padding: 100px 0 0 0;
@@ -148,6 +171,10 @@
 
 @media screen and (max-width: 600px) {
   .about-wrapper {
+
+    .span-container {
+      display: none;
+    }
     
     .paragraph-wrapper {
       padding: 20px 60px;

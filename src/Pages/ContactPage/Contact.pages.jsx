@@ -16,7 +16,8 @@ import './Contact.styles.scss';
       visible: {
         opacity: 1,
         transition: {
-          delay: 0.5,
+          when: "beforeChildren",
+          delay: 1.5,
           staggerChildren: 0.08,
         },
       },
@@ -36,17 +37,31 @@ import './Contact.styles.scss';
     const formVariants = {
       hidden: {
         opacity: 0,
-        scale: 0
+        scaleY: 0
       },
       visible: {
         opacity: 1,
-        scale: 1,
+        scaleY: 1,
         transition: {
           duration: 1.5,
-          ease: "easeInOut"
+          ease: "easeInOut",
+          delayChildren: 1,
         }
       },
     };
+
+    const inputVariants = {
+      hidden: {
+        opacity: 0
+      },
+      visible: {
+        opacity: 1,
+        transition: {
+          duration: 0.5,
+          delay: 1.5
+        }
+      }
+    }
 
 const Contact = (props) => {
   const form = useRef();
@@ -102,65 +117,73 @@ const Contact = (props) => {
   return (
     <section className="contact-wrapper">
 
-    <motion.h1
-      variants={sentence}
+    <motion.div
+      className='container-bg'
+      variants={formVariants}
       initial="hidden"
       animate="visible">
-      {
-        headerText.split("").map((char, index) => {
-          return (
-            <motion.span
-              key={char + "-" + index}
-              variants={letter}>
-              {char}
-            </motion.span>
-          )
-        })
-      }
-    </motion.h1>
-
-      <motion.form
-        ref={form}
-        onSubmit={(e) => {
-          sendEmail(e);
-        }}
-        noValidate //removing default validation of HTML
-        variants={formVariants}
+    
+      <motion.h1
+        variants={sentence}
         initial="hidden"
-        animate="visible"
-      >
+        animate="visible">
+        {
+          headerText.split("").map((char, index) => {
+            return (
+              <motion.span
+                key={char + "-" + index}
+                variants={letter}>
+                {char}
+              </motion.span>
+            )
+          })
+        }
+      </motion.h1>
 
-        <div className='name-email'>
-          <label>Name</label>
-          <input type="text" name="user_name" placeholder="Name" value={name} onChange={onNameChange} className={validated ? '' : 'red-border'} />
-          <label>Email</label>
-          <input type="email" name="user_email" placeholder="Email" value={email} onChange={onEmailChange} className={validated ? '' : 'red-border'} />
-        </div>
+        <motion.form
+          ref={form}
+          onSubmit={(e) => {
+            sendEmail(e);
+          }}
+          noValidate //removing default validation of HTML
+          variants={inputVariants}
+          initial='hidden'
+          animate='visible'
+        >
 
-        <div className='message-div'>
-          <label>Message</label>
-          <textarea name="message" placeholder="Write your message..." value={message} onChange={onMessageChange} className={validated ? '' : 'red-border'} />
-          {
-            !validated &&
-            <div className='warning-msg'>
-              <svg xmlns="http://www.w3.org/2000/svg" className="warning-svg" fill="none" viewBox="0 0 24 24" stroke="#b30000">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-              </svg>
-              <p className='warning-paragraph'>Please fill out all the fields and enter a valid email address.</p>
-            </div>
-          }
-          <input type="submit" value="SUBMIT" />
-        </div>
+          <div className='name-email'>
+            <label>Name</label>
+            <input type="text" name="user_name" placeholder="Name" value={name} onChange={onNameChange} className={validated ? '' : 'red-border'} />
+            <label>Email</label>
+            <input type="email" name="user_email" placeholder="Email" value={email} onChange={onEmailChange} className={validated ? '' : 'red-border'} />
+          </div>
 
-      </motion.form>
+          <div className='message-div'>
+            <label>Message</label>
+            <textarea name="message" placeholder="Write your message..." value={message} onChange={onMessageChange} className={validated ? '' : 'red-border'} />
+            {
+              !validated &&
+              <div className='warning-msg'>
+                <svg xmlns="http://www.w3.org/2000/svg" className="warning-svg" fill="none" viewBox="0 0 24 24" stroke="#b30000">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <p className='warning-paragraph'>Please fill out all the fields and enter a valid email address.</p>
+              </div>
+            }
+            <input type="submit" value="SUBMIT" />
+          </div>
 
-      <motion.div className='contact-info' variants={formVariants} initial="hidden" animate="visible">
-        <a href="mailto:arianascalzodees@gmail.com">arianascalzodees@gmail.com</a>
-        <span>|</span>
-        <p>Las Palmas, Canary Islands, Spain</p>
-      </motion.div>
+        </motion.form>
 
-      {modalOpen && <Modal setOpenModal={setModalOpen} />}
+        <motion.div className='contact-info' variants={formVariants} initial="hidden" animate="visible">
+          <a href="mailto:arianascalzodees@gmail.com">arianascalzodees@gmail.com</a>
+          <span>|</span>
+          <p>Las Palmas, Canary Islands, Spain</p>
+        </motion.div>
+
+        {modalOpen && <Modal setOpenModal={setModalOpen} />}
+    </motion.div>
+
 
     </section>
   );

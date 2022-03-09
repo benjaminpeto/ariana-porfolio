@@ -17,17 +17,19 @@ const containerVariants = {
     opacity: 1,
     transition: {
       delayChildren: 0,
-      staggerChildren: 0.5
+      staggerChildren: 1.3
     }
   }
 };
 
 const linkVariants = {
   hidden: {
-    x: '-200%',
+    x: '-100%',
+    opacity: 0
   },
   visible: {
     x: 0,
+    opacity: 1,
     transition: {
       duration: 1.5
     }

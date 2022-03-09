@@ -6,6 +6,8 @@ import { useInView } from "react-intersection-observer";
 
 import resume from '../../data/ariana_scalzo_cv.pdf';
 
+import { BsDownload } from 'react-icons/bs';
+
 import cocomoon from '../../assets/coco moon facial niht oils.webp';
 import notebook from '../../assets/notebook_.webp';
 import drowning from '../../assets/drowning.webp';
@@ -74,9 +76,7 @@ function AboutSection() {
       opacity: 1,
       scale: 1,
       transition: {
-        delay: 0.6,
-        duration: 1.5,
-        ease: "easeIn"
+        delay: 1,
       }
     },
   };
@@ -89,16 +89,16 @@ function AboutSection() {
       opacity: 1,
       transition: {
         duration: 1,
-        delay: 1.5,
-        staggerChildren: 0.5,
-        childrenDelay: 0.5
+        delay: 2,
+        delayChildren: 0.7,
+        staggerChildren: 0.8
       }
     }
   }
 
   const containerItems = {
     hidden: {
-      y: -400
+      y: 400
     },
     visible: {
       y: 0,
@@ -110,6 +110,14 @@ function AboutSection() {
 
   return (
     <section className='about-wrapper'>
+
+      <div className="span-container">
+        <span>A</span>
+        <span>B</span>
+        <span>O</span>
+        <span>U</span>
+        <span>T</span>
+      </div>
 
         <motion.h1
           variants={sentence}
@@ -153,17 +161,21 @@ function AboutSection() {
           </div>
         </motion.div>
 
-        <div className="button-wrapper">
+        <motion.div
+          className="button-wrapper"
+          variants={buttonVariants}
+          initial="hidden"
+          animate={controls}>
           <motion.a
             className='resume-btn'
             href={resume}
             download="ariana_scalzo_cv.pdf"
-            variants={buttonVariants}
-            initial="hidden"
-            animate={controls}>
+            whileHover={{scale: 1.15}}
+            whileTap={{scale:0.4}}>
+            <BsDownload className='download-btn' />
             RESUME
           </motion.a>
-        </div>
+        </motion.div>
 
         <Link to='/portfolio'>
           <motion.div
@@ -173,18 +185,18 @@ function AboutSection() {
             className='image-wrapper'
           >
             <div className="portfolio-text">PORTFOLIO</div>
-            <motion.div>
-              <img src={cocomoon} alt='cocomoon facial oil' width='500px' variants={containerItems} />
-            </motion.div>
-            <motion.div>
-              <img src={notebook} alt='notebook prints' width='500px' variants={containerItems} />
-            </motion.div>
-            <motion.div>
-              <img src={drowning} alt='illustration of a surfer' width='500px' variants={containerItems} />
-            </motion.div>
-            <motion.div>
-              <img src={perucoffee} alt='coffee bag with illustration' width='500px' variants={containerItems} />
-            </motion.div>
+            <div>
+              <motion.img src={cocomoon} alt='cocomoon facial oil' width='500px' variants={containerItems} />
+            </div>
+            <div>
+              <motion.img src={notebook} alt='notebook prints' width='500px' variants={containerItems} />
+            </div>
+            <div>
+              <motion.img src={drowning} alt='illustration of a surfer' width='500px' variants={containerItems} />
+            </div>
+            <div>
+              <motion.img src={perucoffee} alt='coffee bag with illustration' width='500px' variants={containerItems} />
+            </div>
           </motion.div>
         </Link>
 

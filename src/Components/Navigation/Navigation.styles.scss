@@ -51,8 +51,8 @@
     align-items: flex-start;
     justify-content: flex-start;
     background-color: rgba(255, 255, 255, 0.8);
-    font-family: 'Expletus Sans', cursive;
-    font-size: 18px;
+    font-family: Solar Vesta Serif;
+    font-size: 28px;
     text-transform: uppercase;
     padding-top: 76px;
     padding-left: 26px;
@@ -61,9 +61,13 @@
       text-decoration: none;
       padding: 9px 0;
       color: #87614E;
-
+      padding: 9px 0;
+      transition: 100ms ease-in;
+    
       &:hover {
-        text-decoration: underline;
+        color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #87614e;
       }
     }
   }
@@ -90,5 +94,9 @@
     align-items: center;
     font-size: 48px;
     padding: 0;
+
+    a {
+      padding: 30px 0;
+    }
   }
 }
