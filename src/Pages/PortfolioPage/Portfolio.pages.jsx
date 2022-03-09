@@ -20,7 +20,7 @@ const containerVariants = {
       staggerChildren: 0.5
     }
   }
-}
+};
 
 const linkVariants = {
   hidden: {
@@ -32,7 +32,7 @@ const linkVariants = {
       duration: 1.5
     }
   }
-}
+};
 
 const PortfolioPage = (props) => {
   return (
@@ -47,7 +47,7 @@ const PortfolioPage = (props) => {
       <div className="portfolio-page">
         <motion.div
           className="link-wrapper"
-          variants={containerVariants}
+          variants={+containerVariants} // using unary plus operator, to fix non-boolean warning from react
           initial="hidden"
           animate="visible">
           <motion.div variants={linkVariants} className="links">

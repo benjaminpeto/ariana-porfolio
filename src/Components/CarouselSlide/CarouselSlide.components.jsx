@@ -1,5 +1,5 @@
 import ImageGallery from 'react-image-gallery';
-import { Link, useParams, useNavigate } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import './CarouselSlide.styles.scss';
 
 import bakerSpice from '../../assets/carousel/baker&spice-branding.webp';
