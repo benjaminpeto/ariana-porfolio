@@ -5,7 +5,7 @@ import disableScroll from 'disable-scroll';
 
 export default function useWillAnimate() {
   const [willAnimate, setWillAnimate] = useState(true);
-
+  
   useEffect(() => {
     if(window.sessionStorage.getItem("firstLoadDone") === null) {
       setWillAnimate(true);

@@ -6,8 +6,6 @@ import { useInView } from "react-intersection-observer";
 
 import resume from '../../data/ariana_scalzo_cv.pdf';
 
-import { BsDownload } from 'react-icons/bs';
-
 import cocomoon from '../../assets/coco moon facial niht oils.webp';
 import notebook from '../../assets/notebook_.webp';
 import drowning from '../../assets/drowning.webp';
@@ -51,22 +49,6 @@ function AboutSection() {
     },
   };
 
-  const paragraphVariants = {
-    hidden: {
-      opacity: 0,
-      scale: 0.3
-    },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        delay: 0.3,
-        duration: 1.5,
-        ease: "easeInOut"
-      }
-    },
-  };
-
   const buttonVariants = {
     hidden: {
       opacity: 0,
@@ -89,12 +71,12 @@ function AboutSection() {
       opacity: 1,
       transition: {
         duration: 1,
-        delay: 2,
+        delay: 1,
         delayChildren: 0.7,
         staggerChildren: 0.8
       }
     }
-  }
+  };
 
   const containerItems = {
     hidden: {
@@ -106,18 +88,33 @@ function AboutSection() {
         duration: 2
       }
     },
-}
+  };
+
+  const spanVariants = {
+    hidden: {
+      opacity: 0,
+      scaleX: 0
+    }, 
+    visible: {
+      opacity: 1,
+      scaleX: 1,
+      transition: {
+        delay: 0.2,
+        duration: 0.8
+      }
+    }
+  }
 
   return (
     <section className='about-wrapper'>
 
-      <div className="span-container">
+      <motion.div className="span-container" variants={spanVariants} initial='hidden' animate={controls}>
         <span>A</span>
         <span>B</span>
         <span>O</span>
         <span>U</span>
         <span>T</span>
-      </div>
+      </motion.div>
 
         <motion.h1
           variants={sentence}
@@ -136,11 +133,7 @@ function AboutSection() {
             })
           }
         </motion.h1>
-        <motion.div
-          className="paragraph-wrapper"
-          variants={paragraphVariants}
-          initial="hidden"
-          animate={controls}>
+        <div className="paragraph-wrapper">
           <div>
             <p>
               I'm Ariana, a UX/UI | graphic designer who is passionate about providing interactive experiences and identities to forward thinking brands and companies worldwide.
@@ -159,7 +152,7 @@ function AboutSection() {
               I have an end-to-end understanding of project development from concept to solution, and from pitch to discussed implementation. I enjoy challenges and working to targets, planning ahead, problem solving and quick thinking. Creatively, I enjoy brainstorming and innovative ideas that exploit target market opportunities using advertising strategies that impact consumer buying trends. 
             </p>
           </div>
-        </motion.div>
+        </div>
 
         <motion.div
           className="button-wrapper"
@@ -172,7 +165,6 @@ function AboutSection() {
             download="ariana_scalzo_cv.pdf"
             whileHover={{scale: 1.15}}
             whileTap={{scale:0.4}}>
-            <BsDownload className='download-btn' />
             RESUME
           </motion.a>
         </motion.div>
@@ -184,7 +176,18 @@ function AboutSection() {
             animate={controls}
             className='image-wrapper'
           >
-            <div className="portfolio-text">PORTFOLIO</div>
+            <div className="portfolio-text">
+              <span>P</span>
+              <span>O</span>
+              <span>R</span>
+              <span>T</span>
+              <span>F</span>
+              <span>O</span>
+              <span>L</span>
+              <span>I</span>
+              <span>O</span>
+            </div>
+            
             <div>
               <motion.img src={cocomoon} alt='cocomoon facial oil' width='500px' variants={containerItems} />
             </div>

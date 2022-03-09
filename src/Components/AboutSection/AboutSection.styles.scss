@@ -60,12 +60,7 @@
       border-radius: 5px;
       cursor: pointer;
       transition: 200ms ease-in;
-
-      .download-btn {
-        margin-right: 10px;
-        padding-top: 4px;
-        color: #87614E;
-      }
+      z-index: 4;
     }
   } 
 
@@ -85,16 +80,17 @@
 
     .portfolio-text {
       position: absolute;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10px;
       font-size: 72px;
       font-family: Solar Vesta Serif;
       color: #AB7C65;
       background-color: whitesmoke;
-      width: 100%;
-      text-align: center;
+      width: 100vw;
       opacity: 0.8;
       padding-top: 16px;
-      letter-spacing: 80px;
-      padding-left: 50px;
       z-index: 2;
     }
   }
@@ -114,18 +110,6 @@
     .paragraph-wrapper {
       padding: 0 100px;
     }
-
-    .image-wrapper > .portfolio-text {
-      letter-spacing: 60px;
-      padding-left: 40px;
-    }
-  }
-}
-
-@media screen and (max-width: 1035px) {
-  .about-wrapper > .image-wrapper > .portfolio-text {
-    letter-spacing: 30px;
-    padding-left: 20px;
   }
 }
 
@@ -161,10 +145,6 @@
 
     .button-wrapper {
       margin-top: 0;
-    }
-
-    .image-wrapper > .portfolio-text {
-      letter-spacing: 15px;
     }
   }
 }

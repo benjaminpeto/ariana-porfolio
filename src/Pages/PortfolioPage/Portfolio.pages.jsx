@@ -16,8 +16,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      delayChildren: 0,
-      staggerChildren: 1.3
+      staggerChildren: 0.7,
     }
   }
 };
@@ -31,7 +30,7 @@ const linkVariants = {
     x: 0,
     opacity: 1,
     transition: {
-      duration: 1.5
+      duration: 1.2
     }
   }
 };
@@ -49,7 +48,7 @@ const PortfolioPage = (props) => {
       <div className="portfolio-page">
         <motion.div
           className="link-wrapper"
-          variants={+containerVariants} // using unary plus operator, to fix non-boolean warning from react
+          variants={containerVariants} // using unary plus operator, to fix non-boolean warning from react
           initial="hidden"
           animate="visible">
           <motion.div variants={linkVariants} className="links">

@@ -17,9 +17,18 @@ const headerVariants = {
     opacity:1,
     transition: {
       duration: 2,
-      when: "afterChildren"
+      delay: 3.3
     }
-  }
+  },
+/*   FINISH CONDITIONAL RENDERING!!!
+  visibleFirstTime: {
+    scale: 1,
+    opacity:1,
+    transition: {
+      duration: 2,
+      delay: 4
+    }
+  } */
 }
 
 const WelcomeSection = (props) => {
@@ -32,7 +41,7 @@ const WelcomeSection = (props) => {
       }
       <div className='main-wrapper'>
         <motion.h1 
-          variants={headerVariants}
+          variants={headerVariants }
           initial="hidden"
           animate="visible">
           Ariana Scalzo
