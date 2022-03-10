@@ -164,47 +164,49 @@
   .contact-wrapper {
     padding: 0;
 
-    h1 {
-      font-size: 48px;
-    }
-
-    form {
-      width: 80%;
-
-      .name-email {
-        flex-direction: column;
-        gap: 17px;
-
-        input {
-          width: 100%;
-        }
+    .container-bg {
+      h1 {
+        font-size: 48px;
       }
 
-      .message-div {
+      form {
+        width: 80%;
 
-        input {
-          padding: 15px 0 12px 0;
-          width: 100%;
+        .name-email {
+          flex-direction: column;
+          gap: 17px;
+
+          input {
+            width: 100%;
+          }
         }
 
-        .warning-msg {
-          .warning-svg {
-            width: 10%;
-            height: auto;
+        .message-div {
+
+          input {
+            padding: 15px 0 12px 0;
+            width: 100%;
+          }
+
+          .warning-msg {
+            .warning-svg {
+              width: 10%;
+              height: auto;
+            }
           }
         }
       }
-    }
 
-    .contact-info {
-      flex-direction: column;
+      .contact-info {
+        flex-direction: column;
 
-      a {
-        margin-bottom: 20px;
-      }
-  
-      span {
-        display: none;
+        a {
+          margin-bottom: 20px;
+        }
+    
+        span {
+          display: none;
+        }
       }
     }
   }
@@ -214,20 +216,23 @@
   .contact-wrapper{
     padding-top: 110px;
 
-    h1 {
-      padding-top: 0;
-    }
+    .container-bg {
 
-    form {
-      .message-div input {
-        margin: 13px 0 0 0;
+      h1 {
+        padding-top: 0;
       }
-    }
 
-    .contact-info {
-      font-size: 14px;
-      font-family: 'Expletus Sans', sans-serif;
-      margin-top: 20px;
+      form {
+        .message-div input {
+          margin: 13px 0 0 0;
+        }
+      }
+
+      .contact-info {
+        font-size: 14px;
+        font-family: 'Expletus Sans', sans-serif;
+        margin-top: 20px;
+      }
     }
   }
 }
@@ -235,19 +240,22 @@
 @media screen and (max-width: 360px) {
   .contact-wrapper{
 
-    form {
+    .container-bg {
 
-      .name-email {
-        margin-top: 10px;
+      form {
+
+        .name-email {
+          margin-top: 10px;
+        }
       }
-    }
 
-    .contact-info {
-      font-size: 10px;
-      margin-top: 10px;
+      .contact-info {
+        font-size: 10px;
+        margin-top: 10px;
 
-      a {
-        margin-bottom: 1px;
+        a {
+          margin-bottom: 1px;
+        }
       }
     }
   }

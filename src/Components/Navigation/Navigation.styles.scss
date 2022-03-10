@@ -37,6 +37,13 @@
         font-size: 18px;
         font-family: Solar Vesta Serif;
         cursor: pointer;
+        transition: 100ms ease-in;
+
+        &:hover {
+          color: whitesmoke;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: #87614e;
+        }
       }
     }
   }

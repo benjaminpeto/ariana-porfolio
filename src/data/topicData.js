@@ -67,6 +67,12 @@ import surf2 from '../assets/surfsoul/soulnsurf-series.webp';
 import surf3 from '../assets/surfsoul/surf-skate-4k.gif';
 import surf4 from '../assets/surfsoul/surfskate-strip.webp';
 
+// Ari's portfolio
+
+import uxui1 from '../assets/uxui.webp';
+import uxui2 from '../assets/responsiveness.webp';
+import uxiu3 from '../assets/webdesign.webp';
+
 
 export const topicData = [
   {
@@ -125,4 +131,12 @@ export const topicData = [
     description: "Raised in the Canary Islands by a family with a strong passion for surfing, Saladita studio is a personal project where I  share my endless love for surf and concrete surfing. I translate this through a series of illustrations of geometric figures, retro surf iconography and frames of classic surf movements to create a fun looped GIF.",
     images: [surf1, surf2, surf3, surf4]
   },
+  {
+    id: '108',
+    title: 'My Portfolio',
+    path: '/portfolio/ux-ui',
+    subtitle: 'UX|UI',
+    description: "My first UX/UI project is my portfolio, where I've taken the opportunity to showcase my individual skills and personality as a creative, besides a list of my work.I enjoy following and incorporating current trends such as the person split screen — one screen divided into two —  into my homepage design. My aim was to present a piece of who I am and where I am from by framing images into arches and using an earthy colour palette to represent the aesthtic feel of my homeland the Canary islands. My portfolio itself is ultra-minimalistic, with a lot of spacing and simple color schemes. I feel this creates a good visual hierarchy, and makes it possible to understand what's important at a glance.",
+    images: [uxui1, uxui2, uxiu3]
+  }
 ]

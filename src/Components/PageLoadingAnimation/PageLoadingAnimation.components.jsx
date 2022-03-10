@@ -14,9 +14,9 @@ const svgVariants = {
 		},
 	},
 	goUp: {
-		y: "-50vh",
-		scale: 0,
-		opacity: 0.5,
+		y: "-39vh",
+		scale: 0.2,
+		opacity: 0.7,
 		transition: {
 			duration: 1,
 		},

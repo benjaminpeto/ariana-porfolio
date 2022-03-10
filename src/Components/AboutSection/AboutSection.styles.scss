@@ -59,8 +59,13 @@
       border: 1px solid #87614E;
       border-radius: 5px;
       cursor: pointer;
-      transition: 200ms ease-in;
+      transition: 400ms ease-in;
       z-index: 4;
+
+      &:hover {
+        background-color: #87614E;
+        color: whitesmoke;
+      }
     }
   } 
 

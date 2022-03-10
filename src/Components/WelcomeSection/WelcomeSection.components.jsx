@@ -7,32 +7,31 @@ import PageLoadingAnimation from "../PageLoadingAnimation/PageLoadingAnimation.c
 
 import './WelcomeSection.styles.scss';
 
-const headerVariants = {
-  hidden: {
-    scale: 0,
-    opacity: 0
-  },
-  visible: {
-    scale: 1,
-    opacity:1,
-    transition: {
-      duration: 2,
-      delay: 3.3
-    }
-  },
-/*   FINISH CONDITIONAL RENDERING!!!
-  visibleFirstTime: {
-    scale: 1,
-    opacity:1,
-    transition: {
-      duration: 2,
-      delay: 4
-    }
-  } */
-}
-
 const WelcomeSection = (props) => {
   const shouldAnimate = useWillAnimate();
+
+  const  headerVariants = {
+    hidden: {
+      scale: 0,
+      opacity: 0
+    },
+    visible: {
+      scale: 1,
+      opacity:1,
+      transition: {
+      duration: 2,
+      delay: 3.3
+      }
+    },
+    visibleFast: {
+      scale: 1,
+      opacity:1,
+      transition: {
+      duration: 2,
+      delay: 0.1
+      }
+    },
+  };
 
   return (
     <>
@@ -41,9 +40,9 @@ const WelcomeSection = (props) => {
       }
       <div className='main-wrapper'>
         <motion.h1 
-          variants={headerVariants }
+          variants={headerVariants}
           initial="hidden"
-          animate="visible">
+          animate={!shouldAnimate ? 'visible' : 'visibleFast'}>
           Ariana Scalzo
         </motion.h1>
       </div>

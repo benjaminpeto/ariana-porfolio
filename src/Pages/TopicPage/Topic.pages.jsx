@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import './TopicPage.styles.scss';
@@ -42,32 +42,42 @@ const paragraphVariants = {
     scale: 1,
     transition: {
       duration: 0.9,
-      delay: 0.7,
-    }
-  }
-};
-const imgVariants = {
-  hiddenLeft: {
-    opacity: 0,
-    x: '-100vh'
-  },
-  hiddenRight: {
-    opacity: 0,
-    x: '100vh'
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    type: 'tween',
-    transition: {
-      delay: 1.1,
-      duration: 1
+      delay: 0.65,
     }
   }
 };
 
 const TopicPage = ({ topicData }, props) => {
   const location = useLocation();
+  const history = useNavigate();
+
+  function goBackToPortfolio(e) {
+    e.preventDefault();
+    history('/portfolio');
+  };
+
+  let imgVariants = {};
+  const isMobile = window.innerWidth < 900; // disable animation on viewport less than 900, regarding to a bug
+  if (!isMobile) {
+    imgVariants = {
+      hiddenLeft: {
+        opacity: 0,
+        x: '-100vh'
+      },
+      hiddenRight: {
+        opacity: 0,
+        x: '100vh'
+      },
+      visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+          delay: 0.8,
+          duration: 1
+        }
+      }
+    };
+  };
 
   return (
     <div className='topic-page-container'>
@@ -85,12 +95,19 @@ const TopicPage = ({ topicData }, props) => {
                   src={img}
                   className='responsive'
                   variants={imgVariants}
-                  initial={ idx % 2 === 0 ? 'hiddenLeft' : 'hiddenRight' }
-                  whileInView='visible'/>
+                  initial={ (idx % 2 === 0) ? 'hiddenLeft' : 'hiddenRight' }
+                  whileInView='visible'
+                  loading='lazy' />
               ))
             }
           </div>
       )}
+      <button
+        className='goBack-btn'
+        onClick={goBackToPortfolio}
+      >
+        Back to Portfolio
+      </button>
     </div>
   );
 }
