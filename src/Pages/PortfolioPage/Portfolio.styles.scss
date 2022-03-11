@@ -87,9 +87,12 @@
 			color: #87614e;
 			font-size: 18px;
 			z-index: 50;
+			transition: 200ms ease-in;
 
 			&:hover {
-				text-decoration: underline;
+				color: transparent;
+				-webkit-text-stroke-width: 1px;
+				-webkit-text-stroke-color: #87614e;
 			}
 		}
 

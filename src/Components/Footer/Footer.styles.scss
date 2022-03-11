@@ -10,6 +10,7 @@
     font-family: Solar Vesta Serif;
     color: #87614E;
     font-size: 18px;
+    transition: 200ms ease-in;
 
     &::before,
     &::after {
@@ -21,9 +22,11 @@
       transform: translateY(-0.35rem);
     }
 
-    &:hover {
-      text-decoration: underline;
-    }
+		&:hover {
+			color: transparent;
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: #87614e;
+		}
   }
 
   .footer-text {

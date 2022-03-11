@@ -12,7 +12,6 @@ import sicily from '../../assets/carousel/sicily-branding.webp';
 import saladita from '../../assets/carousel/saladitastudio-illustration.webp';
 import dayDreaming from '../../assets/carousel/daydreaming-illustration.webp';
 import surfSoul from '../../assets/carousel/surfnsoul-illustration.webp';
-//import { category } from '../../data/carouselData';
 
 const carouselVariants = {
   hidden: {
