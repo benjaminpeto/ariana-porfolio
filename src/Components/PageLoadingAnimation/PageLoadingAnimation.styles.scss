@@ -101,15 +101,16 @@
 @media screen and (max-width: 380px) {
   .loading-container {
     .mask-wrapper{
-      mask-position: center 60%;
+      mask-position: center 50%;
     }
   }
 }
 
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 800px),
+        screen and (min-width: 995px) {
   .loading-container {
     .mask-wrapper{
-      mask-position: center 27%;
+      mask-position: center 30%;
     }
   }
 }
