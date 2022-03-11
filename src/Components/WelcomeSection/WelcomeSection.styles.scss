@@ -2,7 +2,8 @@
   height: 100vh;
   width: 100vw;
   background: url(../../assets/ari.webp) no-repeat 
-    center center fixed; 
+    center center; 
+  background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -98,7 +99,7 @@
 
 @media screen and (max-width: 450px) {
   .main-wrapper {
-    background-size: auto;
+    background-attachment: scroll;
 
     h1 {
       font-size: 45px;
