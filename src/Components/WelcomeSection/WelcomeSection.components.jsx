@@ -22,15 +22,7 @@ const WelcomeSection = (props) => {
       duration: 2,
       delay: 3.3
       }
-    },
-    visibleFast: {
-      scale: 1,
-      opacity:1,
-      transition: {
-      duration: 2,
-      delay: 0.1
-      }
-    },
+    }
   };
 
   return (
@@ -42,7 +34,7 @@ const WelcomeSection = (props) => {
         <motion.h1 
           variants={headerVariants}
           initial="hidden"
-          animate={!shouldAnimate ? 'visible' : 'visibleFast'}>
+          animate="visible">
           Ariana Scalzo
         </motion.h1>
       </div>

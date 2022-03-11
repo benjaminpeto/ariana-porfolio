@@ -72,6 +72,13 @@ const Contact = (props) => {
   const [message, setMessage] = useState('');
   const [validated, setValidated] = useState(true);
 
+  // ENVIRONMENTAL VARIABLES FOR EMAILJS
+
+  const userId = process.env.REACT_APP_USER_ID;
+  const serviceId = process.env.REACT_APP_SERVICE_ID;
+  const templateId = process.env.REACT_APP_TEMPLATE_ID;
+
+
   const onNameChange = (event) => {
     setName(event.target.value);
   };
@@ -95,14 +102,12 @@ const Contact = (props) => {
     
     if (!name || !email || !message) {
       setValidated(false);
-      /* alert('You must fill out every field!'); */
     }
     else if (!isEmail(email)) {
       setValidated(false);
-      /* alert("Email needs to be a valid address."); */
     }
     else {
-      emailjs.sendForm('service_ID', 'template_ID', form.current, 'user_ID')
+      emailjs.sendForm(serviceId, templateId, form.current, userId)
       .then((result) => {
         console.log(result.text);
       }, (error) => {
