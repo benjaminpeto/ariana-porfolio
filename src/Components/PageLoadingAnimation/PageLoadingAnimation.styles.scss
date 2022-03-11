@@ -23,6 +23,9 @@
     mask-image: url('../../assets/ari-loading-img.png');
     mask-repeat: no-repeat;
     mask-position: center 30%;
+    -webkit-mask-image: url('../../assets/ari-loading-img.png');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center 30%;
   }
 
   .right-frame {

@@ -2,7 +2,7 @@
 
   .span-container {
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -121,10 +121,6 @@
 @media screen and (max-width: 900px) {
   .about-wrapper {
     height: 100%;
-
-    .span-container {
-      height: 100vh;
-    }
 
     h1 {
       margin: 0 auto;
