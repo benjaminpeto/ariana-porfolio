@@ -98,8 +98,7 @@
 
 @media screen and (max-width: 450px) {
   .main-wrapper {
-    background: url(../../assets/ari.webp) no-repeat 
-    center center sticky; 
+    background-size: auto;
 
     h1 {
       font-size: 45px;
