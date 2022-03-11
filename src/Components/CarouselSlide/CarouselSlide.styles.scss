@@ -28,6 +28,10 @@
       top: 109%;
       color: #CCB0A2;
       filter: none;
+
+      .image-gallery-svg {
+        height: 90px;
+      }
     }
 
     .image-gallery-slides {
@@ -123,7 +127,7 @@
     top: -10%;
 
     .image-gallery-content .image-gallery-slide-wrapper .image-gallery-icon {
-      top: 100%;
+      top: 105%;
     }
 
     .image-gallery-slides .image-gallery-description {
@@ -137,10 +141,6 @@
     width: 85%;
     top: 0;
 
-    .image-gallery-content .image-gallery-slide-wrapper .image-gallery-icon {
-      top: 100%;
-    }
-
     .image-gallery-slides .image-gallery-description {
         bottom: -50px;
     }
@@ -152,6 +152,10 @@
 
     .image-gallery-slides .image-gallery-description {
       bottom: -20px;
+    }
+
+    .image-gallery-content .image-gallery-slide-wrapper .image-gallery-icon {
+      top: 100%;
     }
 
     .links {

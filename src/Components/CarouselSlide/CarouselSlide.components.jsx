@@ -1,5 +1,5 @@
 import ImageGallery from 'react-image-gallery';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 
 import { motion } from 'framer-motion';
 
@@ -33,41 +33,66 @@ const CarouselSlide = (props) => {
 
   const { categoryUrl } = useParams();
 
-  //let navigate = useNavigate();
+  const navigate = useNavigate();
 
 	const imagesBranding = [
     {
       original: cocoMoon,
       description: <Link className='links' to='/portfolio/branding/coco-moon'>coco moon</Link>,
+      originalAlt: '/portfolio/branding/coco-moon',
+      originalTitle: 'coco-moon'
     },
     {
       original: benji,
-      description: <Link className='links' to='/portfolio/branding/benjamin-peto'>Benjamin peto</Link>
+      description: <Link className='links' to='/portfolio/branding/benjamin-peto'>Benjamin peto</Link>,
+      originalAlt: '/portfolio/branding/benjamin-peto',
+      originalTitle: 'benjamin-peto'
     },
     {
       original: bakerSpice,
-      description: <Link className='links' to='/portfolio/branding/baker-&-spice'>Baker & Spice</Link>
+      description: <Link className='links' to='/portfolio/branding/baker-&-spice'>Baker & Spice</Link>,
+      originalAlt: '/portfolio/branding/baker-&-spice',
+      originalTitle: 'baker-&-spice'
     },
     {
       original: sicily,
-      description: <Link className='links' to='/portfolio/branding/sicily-restaurant'>Sicily Restaurant</Link>
+      description: <Link className='links' to='/portfolio/branding/sicily-restaurant'>Sicily Restaurant</Link>,
+      originalAlt: '/portfolio/branding/sicily-restaurant',
+      originalTitle: 'sicily-restaurant'
     },
   ];
 
   const imagesIllustrations = [
     {
       original: dayDreaming,
-      description: <Link className='links' to='/portfolio/illustrations/day-dreaming'>Day dreaming</Link>
+      description: <Link className='links' to='/portfolio/illustrations/day-dreaming'>Day dreaming</Link>,
+      originalAlt: '/portfolio/branding/day-dreaming',
+      originalTitle: 'day-dreaming'
     },
     {
       original: saladita,
-      description: <Link className='links' to='/portfolio/illustrations/saladita-studio'>saladita studio</Link>
+      description: <Link className='links' to='/portfolio/illustrations/saladita-studio'>saladita studio</Link>,
+      originalAlt: '/portfolio/branding/saladita-studio',
+      originalTitle: 'saladita-studio'
     },
     {
       original: surfSoul,
-      description: <Link className='links' to='/portfolio/illustrations/surf-&-soul'>surf & soul</Link>
+      description: <Link className='links' to='/portfolio/illustrations/surf-&-soul'>surf & soul</Link>,
+      originalAlt: '/portfolio/branding/surf-&-soul',
+      originalTitle: 'surf-&-soul'
     },
   ];
+
+  const handleClick = (id) => {
+    for(let i = 0; i < imagesBranding.length; i++) {
+      if(id.target.alt === imagesBranding[i].originalAlt){
+        navigate(`./${imagesBranding[i].originalTitle}`)
+      }
+      else if (id.target.alt === imagesIllustrations[i].originalAlt) {
+        navigate(`./${imagesIllustrations[i].originalTitle}`)
+      }
+    }
+  };
 
 	return (
 		<motion.div className='carousel-container' variants={carouselVariants} initial='hidden' animate='visible'>
@@ -76,7 +101,7 @@ const CarouselSlide = (props) => {
         showThumbnails={false}
         showFullscreenButton={false}
         showPlayButton={false}
-        //onClick={() =>}
+        onClick={(id) => handleClick(id)}
       />
 		</motion.div>
 	);
