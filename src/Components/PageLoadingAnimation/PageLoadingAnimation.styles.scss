@@ -98,6 +98,14 @@
   }
 }
 
+@media screen and (max-width: 380px) {
+  .loading-container {
+    .mask-wrapper{
+      mask-position: center 67%;
+    }
+  }
+}
+
 @media screen and (max-height: 800px),
         screen and (min-width: 995px) {
   .loading-container {
