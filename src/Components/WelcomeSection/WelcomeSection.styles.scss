@@ -97,10 +97,15 @@
 }
 
 @media screen and (max-width: 450px) {
-  .main-wrapper > h1 {
-    font-size: 45px;
-    text-indent: 15px;
-    letter-spacing: 15px;
-    line-height: 90px;
+  .main-wrapper {
+    background: url(../../assets/ari.webp) no-repeat 
+    center center sticky; 
+
+    h1 {
+      font-size: 45px;
+      text-indent: 15px;
+      letter-spacing: 15px;
+      line-height: 90px;
+    }
   }
 }
