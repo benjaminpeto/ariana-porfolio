@@ -20,6 +20,5 @@ export default function useWillAnimate() {
       disableScroll.off()
     }
   }, []);
-  console.log('willAnimate_result: ', willAnimate);
   return willAnimate;
 };
