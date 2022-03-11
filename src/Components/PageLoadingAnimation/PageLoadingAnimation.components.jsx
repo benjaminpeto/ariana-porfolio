@@ -51,28 +51,21 @@ const PageLoadingAnimation = (props) => {
 						<div className="mask-wrapper"></div>
 
 						<motion.svg
+							id="Layer_1"
 							key="svg-img"
+							dataname="Layer 1"
 							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 252.27 221.58"
-							width="252.27"
+							width="252.11"
 							height="221.58"
+							viewBox="0 0 252.11 221.58"
 							className="svg-img"
 							variants={svgVariants}
 							initial="hidden"
 							animate="visible"
 							exit="goUp">
-							<g id="Layer_4" dataname="Layer 4">
-								<path className="cls-1" d="M178.93,221.17,107.19,92.9l-.72,1.21L127,59.71,163.68,121l16-27.45L127,1.13,75,92.84,131.29,193H63.85l15.43,28.18Z" transform="translate(0.03 -0.12)" />
-								<path className="cls-2" d="M179.78,221.67H79L63,192.49h67.43l-56-99.66L127,.12l53.22,93.42L163.68,122,127,60.68,107.77,92.91Zm-100.21-1h98.51L107.18,93.9l-.28.47-.86-.51,0,0,21-35.09L163.67,120,179.1,93.54,127,2.14,75.56,92.84,132.14,193.5H64.69Z" transform="translate(0.03 -0.12)" />
-							</g>
-							<g id="Layer_2" dataname="Layer 2">
-								<polygon className="cls-3" points="73.82 147.1 58.12 120.2 0.86 221.08 31.79 221.08 73.82 147.1" />
-								<path d="M32.05,221.69H0L58.08,119.32l16.28,27.89-.14.25Zm-30.37-1H31.47l41.74-73.47-15.12-25.9Z" transform="translate(0.03 -0.12)" />
-							</g>
-							<g id="Layer_3" dataname="Layer 3">
-								<polygon className="cls-3" points="178.88 148.17 220.21 221.06 251.41 221.06 194.29 120.49 178.88 148.17" />
-								<path  className="cls-4" d="M252.24,221.68H219.89l-41.62-73.39,16-28.7.43.77Zm-31.77-1h30.05l-56.26-99.05-14.84,26.66Z" transform="translate(0.03 -0.12)" />
-							</g>
+							<path className="cls-1" d="M178.38,221.58,106.15,92.41l-.73,1.22L126.14,59,163,120.7l16.11-27.64L126.14,0,73.72,92.35l56.69,100.86H62.5L78,221.58Z" transform="translate(-0.08 0)"/>
+							<polygon className="cls-2" points="73.47 147.09 57.66 120 0 221.58 31.15 221.58 73.47 147.09"/>
+							<polygon className="cls-2" points="179.07 148.18 220.69 221.58 252.11 221.58 194.59 120.3 179.07 148.18"/>
 						</motion.svg>
 
 						<motion.div

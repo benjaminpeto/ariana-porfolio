@@ -46,10 +46,13 @@
     overflow: visible;
     z-index: 109;
 
-    .cls-1{fill:#ab7d65;}
-    .cls-2{fill:#a67c52;}
-    .cls-3{fill:#86614e;}
-    .cls-4{fill:#8c6239;}
+    .cls-1 {
+      fill: #ab7d65;
+    }
+      
+    .cls-2 {
+      fill: #86614e;
+    }
   }
 }
 
@@ -81,6 +84,14 @@
   .loading-container {
     .mask-wrapper{
       mask-position: center 59%;
+    }
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .loading-container {
+    .mask-wrapper{
+      mask-position: center 27%;
     }
   }
 }
