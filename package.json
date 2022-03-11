@@ -9,6 +9,7 @@
     "disable-scroll": "^0.6.0",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^6.2.7",
+    "ga-4-react": "^0.1.281",
     "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

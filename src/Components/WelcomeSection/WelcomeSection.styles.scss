@@ -73,9 +73,13 @@
 }
 
 @media screen and (max-width: 1128px) {
-  .main-wrapper > h1 {
-    letter-spacing: 20px;
-    text-indent: 20px;
+  .main-wrapper{
+    background-size: auto 100vh;
+
+    h1 {
+      letter-spacing: 20px;
+      text-indent: 20px;
+    }
   }
 }
 

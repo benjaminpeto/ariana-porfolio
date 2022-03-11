@@ -72,6 +72,24 @@
   }
 }
 
+@media screen and (max-width: 1450px) {
+  .loading-container {
+    .mask-wrapper{
+      mask-position: center 36%;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 450px) {
+  .loading-container {
+    .mask-wrapper{
+      mask-position: center 36.5%;
+    }
+  }
+}
+
 @media screen and (max-width: 450px) {
   .loading-container {
     .mask-wrapper{
@@ -83,7 +101,7 @@
 @media screen and (max-width: 380px) {
   .loading-container {
     .mask-wrapper{
-      mask-position: center 59%;
+      mask-position: center 60%;
     }
   }
 }
