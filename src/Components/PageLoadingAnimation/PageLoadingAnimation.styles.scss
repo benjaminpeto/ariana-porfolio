@@ -90,18 +90,10 @@
   }
 }
 
-@media screen and (max-width: 450px) {
-  .loading-container {
-    .mask-wrapper{
-      mask-position: center 60%;
-    }
-  }
-}
-
 @media screen and (max-width: 380px) {
   .loading-container {
     .mask-wrapper{
-      mask-position: center 70%;
+      mask-position: center 42%;
     }
   }
 }
