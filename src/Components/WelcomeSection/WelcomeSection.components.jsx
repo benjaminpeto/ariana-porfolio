@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { isIOS } from 'react-device-detect';
 
 import useWillAnimate from "../../Hooks/useWillAnimate";
 
@@ -30,7 +31,7 @@ const WelcomeSection = (props) => {
       {
         shouldAnimate && <PageLoadingAnimation />
       }
-      <div className='main-wrapper'>
+      <div className={ isIOS ? 'main-wrapper-forIOS' : 'main-wrapper'}>
         <motion.h1 
           variants={headerVariants}
           initial="hidden"
