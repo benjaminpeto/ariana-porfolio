@@ -18,8 +18,8 @@
     font-weight: 400;
     font-size: 100px;
     color: transparent;
-    letter-spacing: 120px;
-    text-indent: 120px;
+    letter-spacing: 50px;
+    text-indent: 50px;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: white;
     z-index: 0;
@@ -46,8 +46,8 @@
     font-weight: 400;
     font-size: 100px;
     color: transparent;
-    letter-spacing: 120px;
-    text-indent: 120px;
+    letter-spacing: 50px;
+    text-indent: 50px;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: white;
     z-index: 0;
@@ -55,7 +55,12 @@
 }
 
 @media screen and (max-width: 2620px) {
-  .main-wrapper, .main-wrapper-forIOS > h1 {
+  .main-wrapper > h1 {
+    text-indent: 90px;
+    letter-spacing: 90px;
+    font-size: 95px;
+  }
+  .main-wrapper-forIOS > h1 {
     text-indent: 90px;
     letter-spacing: 90px;
     font-size: 95px;
@@ -63,7 +68,12 @@
 }
 
 @media screen and (max-width: 2150px) {
-  .main-wrapper, .main-wrapper-forIOS > h1 {
+  .main-wrapper > h1 {
+    text-indent: 70px;
+    letter-spacing: 70px;
+    font-size: 90px;
+  }
+  .main-wrapper-forIOS > h1 {
     text-indent: 70px;
     letter-spacing: 70px;
     font-size: 90px;
@@ -71,7 +81,12 @@
 }
 
 @media screen and (max-width: 1816px) {
-  .main-wrapper, .main-wrapper-forIOS > h1 {
+  .main-wrapper > h1 {
+    text-indent: 60px;
+    letter-spacing: 60px;
+    font-size: 80px;
+  }
+  .main-wrapper-forIOS > h1 {
     text-indent: 60px;
     letter-spacing: 60px;
     font-size: 80px;
@@ -79,15 +94,25 @@
 }
 
 @media screen and (max-width: 1583px) {
-  .main-wrapper, .main-wrapper-forIOS > h1 {
-    text-indent: 55px;
-    letter-spacing: 55px;
-    font-size: 71px;
+  .main-wrapper > h1 {
+    text-indent: 40px;
+    letter-spacing: 40px;
+    font-size: 60px;
+  }
+  .main-wrapper-forIOS > h1 {
+    text-indent: 40px;
+    letter-spacing: 40px;
+    font-size: 60px;
   }
 }
 
 @media screen and (max-width: 1430px) {
-  .main-wrapper, .main-wrapper-forIOS > h1 {
+  .main-wrapper > h1 {
+    letter-spacing: 40px;
+    text-indent: 40px;
+    margin: 0 24px;
+  }
+  .main-wrapper-forIOS > h1 {
     letter-spacing: 40px;
     text-indent: 40px;
     margin: 0 24px;
@@ -95,14 +120,24 @@
 }
 
 @media screen and (max-width: 1270px) {
-  .main-wrapper, .main-wrapper-forIOS > h1 {
+  .main-wrapper > h1 {
+    letter-spacing: 30px;
+    text-indent: 30px;
+  }
+  .main-wrapper-forIOS > h1 {
     letter-spacing: 30px;
     text-indent: 30px;
   }
 }
 
 @media screen and (max-width: 1128px) {
-  .main-wrapper, .main-wrapper-forIOS {
+  .main-wrapper {
+    h1 {
+      letter-spacing: 20px;
+      text-indent: 20px;
+    }
+  }
+  .main-wrapper-forIOS {
     h1 {
       letter-spacing: 20px;
       text-indent: 20px;
@@ -111,14 +146,23 @@
 }
 
 @media screen and (max-width: 990px) {
-  .main-wrapper, .main-wrapper-forIOS > h1 {
+  .main-wrapper > h1 {
+    text-indent: 10px;
+    letter-spacing: 10px;
+  }
+  .main-wrapper-forIOS > h1 {
     text-indent: 10px;
     letter-spacing: 10px;
   }
 }
 
 @media screen and (max-width: 847px) {
-  .main-wrapper, .main-wrapper-forIOS > h1 {
+  .main-wrapper > h1 {
+    text-indent: 10px;
+    letter-spacing: 10px;
+    line-height: 90px;
+  }
+  .main-wrapper-forIOS > h1 {
     text-indent: 10px;
     letter-spacing: 10px;
     line-height: 90px;
@@ -126,7 +170,15 @@
 }
 
 @media screen and (max-width: 450px) {
-  .main-wrapper, .main-wrapper-forIOS {
+  .main-wrapper {
+    h1 {
+      font-size: 45px;
+      text-indent: 15px;
+      letter-spacing: 15px;
+      line-height: 90px;
+    }
+  }
+  .main-wrapper-forIOS {
     h1 {
       font-size: 45px;
       text-indent: 15px;
