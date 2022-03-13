@@ -165,7 +165,7 @@ function AboutSection() {
             download="ariana_scalzo_cv.pdf"
             whileHover={{scale: 1.15}}
             whileTap={{scale:0.4}}>
-            RESUME
+            Download CV
           </motion.a>
         </motion.div>
 
