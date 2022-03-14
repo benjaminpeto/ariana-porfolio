@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Ariana Scalzo's Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was made by strictly following along with Ariana's Figma Design. The design brief contained specific user experience and web design which made it quiet challenging.
 
-## Available Scripts
+To build this project I used ReactJS along with the latest React Router v6 which made it possible to create a multi-page website with nested and dynamic routes, and for the styling I used SCSS.
+I also took advantage of the new hooks of React Router such as useNavigate and useHistory and the new Outlet component which made it possible to render a different layout of Navigation and Footer on the specific page without duplicating existing code.
 
-In the project directory, you can run:
+For the animations I learnt to use Framer Motion, which I really loved, but also levaraged some CSS animations for an automatic image slideshow on the Portfolio page, and other basic CSS animations for buttons.
 
-### `npm start`
+The contact form submission using emailJS and the validation made with the famous validator library from npm with some nice CSS styles for the user experience.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Dependencies
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  - react
+  - react-dom
+  - react-router-dom
+  - react-icons
+  - react-device-detect
+  - react-image-gallery
+  - react-intersection-observer
+  - node-sass
+  - framer-motion
+  - emailjs-com
+  - validator
 
-### `npm test`
+### Bug report
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+After deployment, I came across multiple bugs on the website especially on IOS devices That's why I added a new npm library called 'react-device-detect' which I used to detect IOS devices and gave them a different styling.
+The main problem was coming from an element which has a background-image css property, and when we set the background-attachment: fix, on IOS devices the background image expanded, this didn't appeared on chrome devtool, neither in Responsively App where I tested the different screens.
+According to that, I changed the background-attachment: scroll. And voala! It worked :)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Live Website](https://www.arianascalzo.com)
