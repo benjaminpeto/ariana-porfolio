@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
+import maskImg from '../../assets/ari-loading-img.png';
+
 import "./PageLoadingAnimation.styles.scss";
 
 const svgVariants = {
@@ -14,7 +16,7 @@ const svgVariants = {
 		},
 	},
 	goUp: {
-		y: "-39vh",
+		y: "-43.5vh",
 		scale: 0.2,
 		opacity: 0.7,
 		transition: {
@@ -48,7 +50,9 @@ const PageLoadingAnimation = (props) => {
 							transition={{ duration: 1.5, delay: 2 }}
 						></motion.div>
 
-						<div className="mask-wrapper"></div>
+						<div className="mask-wrapper">
+							<img className="image-mask" src={maskImg} alt='' />
+						</div>
 
 						<motion.svg
 							id="Layer_1"

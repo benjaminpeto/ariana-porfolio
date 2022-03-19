@@ -70,8 +70,8 @@ function AboutSection() {
     visible: {
       opacity: 1,
       transition: {
-        duration: 0.5,
-        delay: 1,
+        duration: 1,
+        delay: 2,
         delayChildren: 0.7,
         staggerChildren: 0.8
       }
