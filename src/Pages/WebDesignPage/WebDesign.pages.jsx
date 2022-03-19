@@ -101,7 +101,7 @@ const WebDesign = (props) => {
 					animate='visible'>
 						My first UX/UI project is my portfolio, where I've taken the opportunity to showcase my individual skills and personality as a creative, besides a list of my work. 
 				I enjoy following and incorporating current trends such as the person split screen — one screen divided into two —  into my homepage design. 
-				My aim was to present a piece of who I am and where I am from by framing images into arches and using an earthy colour palette to represent the aesthtic feel of my homeland the Canary islands. My portfolio itself is ultra-minimalistic, with a lot of spacing and simple color schemes. I feel this creates a good visual hierarchy, and makes it possible to understand what's important at a glance.
+				My aim was to present a piece of who I am and where I am from by framing images into arches and using an earthy colour palette to represent the aesthetic feel of my homeland the Canary Islands. My portfolio itself is ultra-minimalistic, with a lot of spacing and simple color schemes. I feel this creates a good visual hierarchy, and makes it possible to understand what's important at a glance.
 				</motion.p>
 				<motion.img alt="" src={responsive} className="responsive" variants={imgVariants} initial='hiddenLeft' whileInView='visible' />
 				<motion.img alt="" src={webdesign} className="responsive" variants={imgVariants} initial='hiddenRight' whileInView='visible' />

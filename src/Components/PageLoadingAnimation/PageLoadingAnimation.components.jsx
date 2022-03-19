@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-import maskImg from '../../assets/ari-loading-img.png';
+import maskImg from '../../assets/arimask.png';
 
 import "./PageLoadingAnimation.styles.scss";
 
@@ -41,7 +41,7 @@ const PageLoadingAnimation = (props) => {
 	return (
 		<>
 			<AnimatePresence>
-				{isShown && (
+				{ isShown && (
 					<div className="loading-container">
 						<motion.div
 							className="left-frame"

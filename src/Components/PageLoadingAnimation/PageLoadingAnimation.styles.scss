@@ -19,9 +19,8 @@
     align-items: center;
 
     .image-mask {
-      width: auto;
-      height: 62%;
-      margin-bottom: 95px;
+      width: 100%;
+      height: auto;
     }
   }
 
@@ -53,100 +52,62 @@
   }
 }
 
-@media screen and (min-width: 1680px) {
-  .loading-container {
-    .mask-wrapper {
-      .image-mask {
-        height: 67%;
-        margin-bottom: 115px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1650px) {
-  .loading-container {
-    .mask-wrapper {
-      .image-mask {
-        height: 61%;
-        margin-bottom: 90px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1620px) {
-  .loading-container {
-    .mask-wrapper {
-      .image-mask {
-        height: 60%;
-        margin-bottom: 90px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1590px) {
-  .loading-container {
-    .mask-wrapper {
-      .image-mask {
-        height: 58%;
-        margin-bottom: 90px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1560px) {
-  .loading-container {
-    .mask-wrapper {
-      .image-mask {
-        height: 57%;
-        margin-bottom: 90px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1530px) {
-  .loading-container {
-    .mask-wrapper {
-      .image-mask {
-        height: 56%;
-        margin-bottom: 90px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1500px) {
-  .loading-container {
-    .mask-wrapper {
-      .image-mask {
-        height: 55%;
-        margin-bottom: 85px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1475px) {
-  .loading-container {
-    .mask-wrapper {
-      .image-mask {
-        height: 54.5%;
-        margin-bottom: 85px;
-      }
-    }
-  }
-}
-
 @media screen and (max-width: 1450px) {
   .loading-container {
     .mask-wrapper {
       .image-mask {
-        height: 53.5%;
-        margin-bottom: 83px;
+        width: 170%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .loading-container {
+    .mask-wrapper {
+      .image-mask {
+        width: 210%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .loading-container {
+    .mask-wrapper {
+      .image-mask {
+        width: 300%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .loading-container {
+    .mask-wrapper {
+      .image-mask {
+        width: 400%;
+        height: 100vh;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .loading-container {
+    .mask-wrapper {
+      .image-mask {
+        width: 360%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .loading-container {
+    .mask-wrapper {
+      .image-mask {
+        width: 300%;
       }
     }
   }
