@@ -30,27 +30,44 @@ function Navigation() {
 	},[]);
 
 	return (
-		<motion.nav className={colorChange ? 'navbar colorChange' : 'navbar'}>
+		<motion.nav className={colorChange ? "navbar colorChange" : "navbar"}>
 			<MenuButton />
 
-			<Link to='/'>
-				<img src={logo} alt="Ariana Scalzo's logo" height='39px' />
+			<Link to="/">
+				<img src={logo} alt="Ariana Scalzo's logo" height="39px" />
 			</Link>
-			
+
 			<ul>
-        <li>
-          <a href='https://www.linkedin.com/in/ariana-carmen-scalzo-dees/' target='_blank' rel='noreferrer'>
+				<li>
+					<a
+						href="https://www.linkedin.com/in/ariana-carmen-scalzo-dees/"
+						target="_blank"
+						rel="noreferrer noopener"
+					>
 						IN
 					</a>
 				</li>
 				<li>|</li>
 				<li>
-          <a href='https://www.instagram.com/arianascalzodesign/' target='_blank' rel='noreferrer'>
+					<a
+						href="https://www.instagram.com/arianascalzodesign/"
+						target="_blank"
+						rel="noreferrer noopener"
+					>
 						IG
 					</a>
 				</li>
-      </ul>
-
+				<li>|</li>
+				<li>
+					<a
+						href="https://www.behance.net/arianascalzo"
+						target="_blank"
+						rel="noreferrer noopener"
+					>
+						BĒ
+					</a>
+				</li>
+			</ul>
 		</motion.nav>
 	);
 }

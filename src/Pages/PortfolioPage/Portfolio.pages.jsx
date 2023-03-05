@@ -37,69 +37,81 @@ const linkVariants = {
 
 const PortfolioPage = (props) => {
   return (
-    <div className="page-wrapper">
-      <nav className="navbar">
-        <MenuButton />
-        <Link to='/'>
-          <img src={logo} alt="Ariana Scalzo's logo" height='39px' />
-        </Link>
-      </nav>
+		<div className="page-wrapper">
+			<nav className="navbar">
+				<MenuButton />
+				<Link to="/">
+					<img src={logo} alt="Ariana Scalzo's logo" height="39px" />
+				</Link>
+			</nav>
 
-      <div className="portfolio-page">
-        <motion.div
-          className="link-wrapper"
-          variants={containerVariants} // using unary plus operator, to fix non-boolean warning from react
-          initial="hidden"
-          animate="visible">
-          <motion.div variants={linkVariants} className="links">
-            <p>01</p>
-            <Link
-              to="/portfolio/ux-ui"
-              variants>
-              UX | UI
-            </Link>
-          </motion.div>
-          <motion.div variants={linkVariants} className="links">
-            <p>02</p>
-            <Link to="/portfolio/branding">
-              BRANDING
-            </Link>
-          </motion.div>
-          <motion.div variants={linkVariants} className="links">
-            <p>03</p>
-            <Link to="/portfolio/illustrations">
-              ILLUSTRATIONS
-            </Link>
-          </motion.div>
-        </motion.div>
+			<div className="portfolio-page">
+				<motion.div
+					className="link-wrapper"
+					variants={containerVariants} // using unary plus operator, to fix non-boolean warning from react
+					initial="hidden"
+					animate="visible"
+				>
+					<motion.div variants={linkVariants} className="links">
+						<p>01</p>
+						<Link to="/portfolio/ux-ui" variants>
+							UX | UI
+						</Link>
+					</motion.div>
+					<motion.div variants={linkVariants} className="links">
+						<p>02</p>
+						<Link to="/portfolio/branding">BRANDING</Link>
+					</motion.div>
+					<motion.div variants={linkVariants} className="links">
+						<p>03</p>
+						<Link to="/portfolio/illustrations">ILLUSTRATIONS</Link>
+					</motion.div>
+				</motion.div>
 
-        <div className="carousel">
-          <SlideShow />
-        </div>
-      </div>
+				<div className="carousel">
+					<SlideShow />
+				</div>
+			</div>
 
-      <footer>
-        <Link to="/contact" className="contact-btn">
-          Contact
-        </Link>
+			<footer>
+				<Link to="/contact" className="contact-btn">
+					Contact
+				</Link>
 
-        <ul>
-          <li>
-            <a href='https://www.linkedin.com/in/ariana-carmen-scalzo-dees/' target='_blank' rel='noreferrer'>
-              IN
-            </a>
-          </li>
-				  <li>|</li>
-          <li>
-            <a href='https://www.instagram.com/arianascalzodesign/' target='_blank' rel='noreferrer'>
-              IG
-            </a>
-          </li>
-        </ul>
-      </footer>
-    
-    </div>
-  );
+				<ul>
+					<li>
+						<a
+							href="https://www.linkedin.com/in/ariana-carmen-scalzo-dees/"
+							target="_blank"
+							rel="noreferrer"
+						>
+							IN
+						</a>
+					</li>
+					<li>|</li>
+					<li>
+						<a
+							href="https://www.instagram.com/arianascalzodesign/"
+							target="_blank"
+							rel="noreferrer"
+						>
+							IG
+						</a>
+					</li>
+					<li>|</li>
+					<li>
+						<a
+							href="https://www.behance.net/arianascalzo"
+							target="_blank"
+							rel="noreferrer noopener"
+						>
+							BĒ
+						</a>
+					</li>
+				</ul>
+			</footer>
+		</div>
+	);
 }
 
 export default PortfolioPage;
